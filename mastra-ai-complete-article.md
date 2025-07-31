@@ -32,7 +32,7 @@ Sam Bhagwat, Mastra's founder and former co-founder of Gatsby.js, has documented
 
 **Mastra Features Showcased**: This implementation demonstrates Mastra's multi-agent collaboration, persistent memory systems, custom tool integration, graph-based workflow orchestration, type-safe tool development, and comprehensive evaluation capabilities working together in a complex domain-specific application.
 
-To demonstrate Mastra's capabilities in action, consider our implementation of a medical diagnostic system inspired by the television series House M.D. This project showcases how the framework handles complex multi-agent scenarios while maintaining distinct personalities and expertise areas.
+To demonstrate Mastra's capabilities in action, consider our implementation of a medical diagnostic system inspired by the television series House M.D. This project showcases how the framework handles complex multi-agent scenarios while maintaining distinct personalities and expertise areas. Note that this implementation uses Mastra's core agent and memory features, demonstrating practical application rather than exhaustive use of all platform capabilities.
 
 ![Architecture Diagram: Multi-Agent Medical Diagnostic System](./architecture-diagram.svg)
 
@@ -129,11 +129,11 @@ export const symptomChecker = new Tool({
 });
 ```
 
-This implementation demonstrates several advanced features: agent memory allows each doctor to remember previous cases and build diagnostic experience over time. Real-time collaboration enables agents to communicate and challenge each other's diagnoses. The evaluation system validates medical accuracy through automated scoring. Workflow branching handles both obvious cases requiring immediate attention and complex conditions needing full investigation. Complete observability tracks each step of the diagnostic process with audit trails.
+This implementation demonstrates several key features: persistent memory maintains conversation context for each agent across interactions. Multi-agent collaboration enables doctors to communicate and challenge each other's diagnoses. The evaluation system includes medical accuracy scoring capabilities. Workflow orchestration handles different diagnostic paths from initial assessment through specialist consultation. Basic observability provides execution tracking and logs.
 
-The result is a sophisticated system that processes patient symptoms through multiple specialist perspectives, challenges conventional thinking (House's signature approach), and provides ethically-reviewed diagnoses while maintaining the character personalities that made the show compelling.
+The result is a system that processes patient symptoms through multiple specialist perspectives, challenges conventional thinking (House's signature approach), and maintains the distinct character personalities that made the show compelling.
 
-This medical simulation represents just one domain application of Mastra's broader capabilities, but it illustrates how the framework handles complex agent interactions, tool orchestration, and workflow management in a real-world scenario.
+This medical simulation represents one domain application of Mastra's capabilities, illustrating how the framework handles agent interactions, tool integration, and workflow coordination in a focused implementation.
 
 ## Real-World Applications Beyond Entertainment
 
