@@ -67,7 +67,8 @@ Each agent maintains distinct specializations—Foreman focuses on neurology, Ca
 The diagnostic workflow orchestrates these agents through a structured process:
 
 ```typescript
-// From src/mastra/workflows/ai-diagnostic-workflow.ts
+// Simplified example from src/mastra/workflows/ai-diagnostic-workflow.ts
+// (Actual implementation includes detailed step logic, parsing, and error handling)
 export const aiDiagnosticWorkflow = createWorkflow({
   id: 'ai-diagnostic-workflow',
   inputSchema: patientCaseSchema,
@@ -81,6 +82,8 @@ export const aiDiagnosticWorkflow = createWorkflow({
   .then(houseContrarian)
   .then(wilsonEthics);
 ```
+
+The repository includes additional workflow implementations for testing and comparison: `diagnostic-workflow.ts` for basic diagnostics, `multi-round-diagnostic.ts` for iterative case analysis, and various test scenarios that demonstrate different diagnostic approaches.
 
 The symptom checker tool demonstrates Mastra's type-safe tool system:
 
