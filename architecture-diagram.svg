@@ -1,16 +1,5 @@
 <svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feMorphology operator="dilate" radius="2"/>
-      <feOffset dx="2" dy="2" result="offset"/>
-      <feFlood flood-color="rgba(0,0,0,0.2)"/>
-      <feComposite in2="offset" operator="in"/>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    
     <marker id="arrowhead" markerWidth="10" markerHeight="7" 
             refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#4A90E2" />
@@ -21,99 +10,99 @@
   <rect width="1200" height="800" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
   
   <!-- Title -->
-  <text x="600" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b">
+  <text x="600" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b">
     Multi-Agent Medical Diagnostic System Architecture
   </text>
   
   <!-- Patient Case Input -->
-  <rect x="50" y="80" width="140" height="60" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
-  <text x="120" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7c2d12">Patient Case</text>
-  <text x="120" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7c2d12">Input</text>
+  <rect x="50" y="80" width="140" height="60" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="120" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7c2d12">Patient Case</text>
+  <text x="120" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7c2d12">Input</text>
   
   <!-- Workflow Orchestration -->
-  <rect x="250" y="60" width="180" height="100" rx="10" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4c1d95">Workflow Orchestration</text>
-  <text x="340" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4c1d95">Graph-based State Machine</text>
-  <text x="340" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4c1d95">• Branching Logic</text>
-  <text x="340" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4c1d95">• Error Recovery</text>
+  <rect x="250" y="60" width="180" height="100" rx="10" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="340" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4c1d95">Workflow Orchestration</text>
+  <text x="340" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4c1d95">Graph-based State Machine</text>
+  <text x="340" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4c1d95">• Branching Logic</text>
+  <text x="340" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4c1d95">• Error Recovery</text>
   
   <!-- Medical Tools Section -->
-  <rect x="480" y="40" width="280" height="140" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
-  <text x="620" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0c4a6e">Medical Analysis Tools</text>
+  <rect x="480" y="40" width="280" height="140" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="620" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0c4a6e">Medical Analysis Tools</text>
   
   <!-- Symptom Checker -->
-  <rect x="500" y="80" width="80" height="50" rx="5" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-  <text x="540" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">Symptom</text>
-  <text x="540" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1e40af">Checker</text>
+  <rect x="500" y="85" width="75" height="45" rx="5" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="537" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">Symptom</text>
+  <text x="537" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1e40af">Checker</text>
   
   <!-- Lab Analyzer -->
-  <rect x="590" y="80" width="80" height="50" rx="5" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-  <text x="630" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">Lab</text>
-  <text x="630" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1e40af">Analyzer</text>
+  <rect x="585" y="85" width="75" height="45" rx="5" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="622" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">Lab</text>
+  <text x="622" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1e40af">Analyzer</text>
   
   <!-- Imaging Interpreter -->
-  <rect x="680" y="80" width="80" height="50" rx="5" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-  <text x="720" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">Imaging</text>
-  <text x="720" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1e40af">Interpreter</text>
+  <rect x="670" y="85" width="75" height="45" rx="5" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="707" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">Imaging</text>
+  <text x="707" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1e40af">Interpreter</text>
   
   <!-- Medical Agents Section -->
-  <rect x="50" y="220" width="700" height="200" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
-  <text x="400" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#166534">Medical Diagnostic Agents</text>
+  <rect x="50" y="220" width="700" height="200" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="400" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#166534">Medical Diagnostic Agents</text>
   
   <!-- Dr. House (Lead Agent) -->
-  <ellipse cx="150" cy="320" rx="80" ry="50" fill="#fecaca" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
-  <text x="150" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7f1d1d">Dr. House</text>
-  <text x="150" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f1d1d">Lead Diagnostician</text>
-  <text x="150" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#7f1d1d">Contrarian Analysis</text>
+  <ellipse cx="150" cy="320" rx="75" ry="45" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+  <text x="150" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7f1d1d">Dr. House</text>
+  <text x="150" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f1d1d">Lead Diagnostician</text>
+  <text x="150" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#7f1d1d">Contrarian Analysis</text>
   
   <!-- Dr. Wilson -->
-  <ellipse cx="300" cy="280" rx="65" ry="40" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
-  <text x="300" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#9a3412">Dr. Wilson</text>
-  <text x="300" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9a3412">Ethics Review</text>
+  <ellipse cx="300" cy="285" rx="60" ry="35" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+  <text x="300" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#9a3412">Dr. Wilson</text>
+  <text x="300" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9a3412">Ethics Review</text>
   
   <!-- Dr. Foreman -->
-  <ellipse cx="450" cy="280" rx="65" ry="40" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
-  <text x="450" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#92400e">Dr. Foreman</text>
-  <text x="450" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#92400e">Neurology</text>
+  <ellipse cx="450" cy="285" rx="60" ry="35" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+  <text x="450" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#92400e">Dr. Foreman</text>
+  <text x="450" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#92400e">Neurology</text>
   
   <!-- Dr. Cameron -->
-  <ellipse cx="600" cy="280" rx="65" ry="40" fill="#bbf7d0" stroke="#059669" stroke-width="2"/>
-  <text x="600" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#065f46">Dr. Cameron</text>
-  <text x="600" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#065f46">Immunology</text>
+  <ellipse cx="600" cy="285" rx="60" ry="35" fill="#bbf7d0" stroke="#059669" stroke-width="2"/>
+  <text x="600" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#065f46">Dr. Cameron</text>
+  <text x="600" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#065f46">Immunology</text>
   
   <!-- Dr. Chase -->
-  <ellipse cx="300" cy="360" rx="65" ry="40" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"/>
-  <text x="300" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#312e81">Dr. Chase</text>
-  <text x="300" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#312e81">Surgery</text>
+  <ellipse cx="300" cy="365" rx="60" ry="35" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="300" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#312e81">Dr. Chase</text>
+  <text x="300" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#312e81">Surgery</text>
   
   <!-- Memory & RAG System -->
-  <rect x="800" y="60" width="160" height="120" rx="10" fill="#fdf2f8" stroke="#ec4899" stroke-width="2" filter="url(#shadow)"/>
-  <text x="880" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#831843">Memory & RAG</text>
-  <text x="880" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#831843">• Short-term Memory</text>
-  <text x="880" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#831843">• Long-term Memory</text>
-  <text x="880" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#831843">• Medical Knowledge</text>
-  <text x="880" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#831843">• Case History</text>
+  <rect x="800" y="60" width="160" height="120" rx="10" fill="#fdf2f8" stroke="#ec4899" stroke-width="2"/>
+  <text x="880" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#831843">Memory &amp; RAG</text>
+  <text x="880" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#831843">• Short-term Memory</text>
+  <text x="880" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#831843">• Long-term Memory</text>
+  <text x="880" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#831843">• Medical Knowledge</text>
+  <text x="880" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#831843">• Case History</text>
   
   <!-- Evaluation System -->
-  <rect x="800" y="220" width="160" height="100" rx="10" fill="#f3e8ff" stroke="#9333ea" stroke-width="2" filter="url(#shadow)"/>
-  <text x="880" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#581c87">Evaluation System</text>
-  <text x="880" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#581c87">• Medical Accuracy</text>
-  <text x="880" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#581c87">• Bias Detection</text>
-  <text x="880" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#581c87">• Quality Metrics</text>
+  <rect x="800" y="220" width="160" height="100" rx="10" fill="#f3e8ff" stroke="#9333ea" stroke-width="2"/>
+  <text x="880" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#581c87">Evaluation System</text>
+  <text x="880" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#581c87">• Medical Accuracy</text>
+  <text x="880" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#581c87">• Bias Detection</text>
+  <text x="880" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#581c87">• Quality Metrics</text>
   
   <!-- Diagnostic Output -->
-  <rect x="50" y="480" width="200" height="80" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="2" filter="url(#shadow)"/>
-  <text x="150" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#166534">Diagnostic Output</text>
-  <text x="150" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#166534">• Consensus Diagnosis</text>
-  <text x="150" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#166534">• Confidence Scores</text>
-  <text x="150" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#166534">• Treatment Options</text>
+  <rect x="50" y="480" width="200" height="80" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="150" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#166534">Diagnostic Output</text>
+  <text x="150" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#166534">• Consensus Diagnosis</text>
+  <text x="150" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#166534">• Confidence Scores</text>
+  <text x="150" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#166534">• Treatment Options</text>
   
-  <!-- Observable & Monitoring -->
-  <rect x="300" y="480" width="200" height="80" rx="10" fill="#fef7ff" stroke="#a855f7" stroke-width="2" filter="url(#shadow)"/>
-  <text x="400" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b21a8">Observability</text>
-  <text x="400" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b21a8">• Audit Trails</text>
-  <text x="400" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b21a8">• Decision Tracking</text>
-  <text x="400" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b21a8">• Performance Metrics</text>
+  <!-- Observability & Monitoring -->
+  <rect x="300" y="480" width="200" height="80" rx="10" fill="#fef7ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="400" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b21a8">Observability</text>
+  <text x="400" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b21a8">• Audit Trails</text>
+  <text x="400" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b21a8">• Decision Tracking</text>
+  <text x="400" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b21a8">• Performance Metrics</text>
   
   <!-- Data Flow Arrows -->
   <!-- Patient Case to Workflow -->
@@ -128,13 +117,14 @@
   <!-- Workflow to Agents -->
   <line x1="340" y1="160" x2="340" y2="220" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
   
-  <!-- Agents to House (coordination) -->
-  <line x1="300" y1="320" x2="230" y2="320" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="450" y1="310" x2="200" y2="330" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="600" y1="310" x2="210" y2="340" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Agents coordination lines -->
+  <line x1="240" y1="285" x2="225" y2="300" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="390" y1="285" x2="225" y2="310" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="540" y1="285" x2="225" y2="320" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="240" y1="365" x2="225" y2="350" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
   
   <!-- House to Output -->
-  <line x1="150" y1="370" x2="150" y2="480" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="150" y1="365" x2="150" y2="480" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
   
   <!-- Agents to Evaluation -->
   <line x1="750" y1="320" x2="800" y2="270" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
@@ -143,32 +133,32 @@
   <line x1="250" y1="520" x2="300" y2="520" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
   
   <!-- Legend -->
-  <rect x="1000" y="50" width="180" height="200" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-  <text x="1090" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Legend</text>
+  <rect x="1000" y="50" width="180" height="220" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="1090" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Legend</text>
   
-  <circle cx="1020" cy="95" r="8" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
-  <text x="1040" y="100" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Lead Agent</text>
+  <ellipse cx="1025" cy="105" rx="12" ry="8" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <text x="1050" y="110" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Lead Agent</text>
   
-  <circle cx="1020" cy="115" r="8" fill="#fed7aa" stroke="#ea580c" stroke-width="1"/>
-  <text x="1040" y="120" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Specialist Agents</text>
+  <ellipse cx="1025" cy="125" rx="12" ry="8" fill="#fed7aa" stroke="#ea580c" stroke-width="1"/>
+  <text x="1050" y="130" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Specialist Agents</text>
   
-  <rect x="1015" y="130" width="10" height="10" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-  <text x="1040" y="140" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Medical Tools</text>
+  <rect x="1015" y="140" width="20" height="12" rx="2" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="1050" y="150" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Medical Tools</text>
   
-  <rect x="1015" y="150" width="10" height="10" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1"/>
-  <text x="1040" y="160" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Orchestration</text>
+  <rect x="1015" y="160" width="20" height="12" rx="2" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="1050" y="170" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Orchestration</text>
   
-  <rect x="1015" y="170" width="10" height="10" fill="#fdf2f8" stroke="#ec4899" stroke-width="1"/>
-  <text x="1040" y="180" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Memory System</text>
+  <rect x="1015" y="180" width="20" height="12" rx="2" fill="#fdf2f8" stroke="#ec4899" stroke-width="1"/>
+  <text x="1050" y="190" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Memory System</text>
   
-  <rect x="1015" y="190" width="10" height="10" fill="#f3e8ff" stroke="#9333ea" stroke-width="1"/>
-  <text x="1040" y="200" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Evaluation</text>
+  <rect x="1015" y="200" width="20" height="12" rx="2" fill="#f3e8ff" stroke="#9333ea" stroke-width="1"/>
+  <text x="1050" y="210" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Evaluation</text>
   
-  <line x1="1015" y1="215" x2="1025" y2="215" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="1040" y="220" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Data Flow</text>
+  <line x1="1015" y1="230" x2="1035" y2="230" stroke="#4A90E2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="1050" y="235" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Data Flow</text>
   
   <!-- Framework Label -->
-  <text x="600" y="780" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#64748b">
+  <text x="600" y="770" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#64748b">
     Built with Mastra.ai Framework - TypeScript-native AI Agent Platform
   </text>
 </svg>
