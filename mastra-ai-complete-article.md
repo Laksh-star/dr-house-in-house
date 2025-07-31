@@ -34,7 +34,7 @@ Sam Bhagwat, Mastra's founder and former co-founder of Gatsby.js, has documented
 
 To demonstrate Mastra's capabilities in action, consider our implementation of a medical diagnostic system inspired by the television series House M.D. This project showcases how the framework handles complex multi-agent scenarios while maintaining distinct personalities and expertise areas.
 
-*[Architecture Diagram: Multi-Agent Medical Diagnostic System - showing agents (House, Wilson, Foreman, Cameron, Chase), tools (Symptom Checker, Lab Analyzer, Imaging Interpreter), workflow orchestration, and evaluation components]*
+![Architecture Diagram: Multi-Agent Medical Diagnostic System](./architecture-diagram.svg)
 
 The system creates AI agents for each main character from the show, with Dr. House serving as the lead diagnostician who challenges conventional thinking:
 
