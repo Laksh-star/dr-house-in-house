@@ -1,0 +1,22 @@
+{
+  "patientId": "MULTIROUND-001",
+  "age": 32,
+  "sex": "male",
+  "chiefComplaint": "Progressive weakness, tremors, and personality changes over 4 months",
+  "symptoms": [
+    "progressive muscle weakness",
+    "tremors in hands",
+    "difficulty concentrating",
+    "personality changes",
+    "mild depression",
+    "occasional nausea"
+  ],
+  "medicalHistory": [
+    "father died of liver disease at age 40",
+    "no other significant medical history"
+  ],
+  "medications": [
+    "multivitamin",
+    "occasional ibuprofen"
+  ]
+}

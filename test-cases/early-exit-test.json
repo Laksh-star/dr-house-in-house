@@ -1,0 +1,99 @@
+{
+  "earlyExitCases": [
+    {
+      "name": "Classic Bacterial Meningitis - SHOULD EXIT EARLY",
+      "case": {
+        "patientId": "EARLY-EXIT-001",
+        "age": 25,
+        "sex": "female",
+        "chiefComplaint": "Severe headache with neck stiffness and fever",
+        "symptoms": [
+          "severe headache",
+          "fever",
+          "neck stiffness",
+          "photophobia",
+          "confusion"
+        ],
+        "medicalHistory": ["no significant medical history"],
+        "medications": ["birth control pills"],
+        "labResults": [
+          {
+            "testName": "White Blood Cell Count",
+            "value": 15000,
+            "unit": "cells/μL",
+            "referenceRange": "4000-11000"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Classic STEMI - SHOULD EXIT EARLY",
+      "case": {
+        "patientId": "EARLY-EXIT-002",
+        "age": 55,
+        "sex": "male",
+        "chiefComplaint": "Crushing chest pain radiating to left arm",
+        "symptoms": [
+          "crushing chest pain",
+          "left arm pain",
+          "sweating",
+          "nausea",
+          "shortness of breath"
+        ],
+        "medicalHistory": ["diabetes", "hypertension", "smoking history"],
+        "medications": ["metformin", "lisinopril"],
+        "labResults": [
+          {
+            "testName": "Troponin I",
+            "value": 8.5,
+            "unit": "ng/mL",
+            "referenceRange": "<0.04"
+          }
+        ]
+      }
+    }
+  ],
+  "fullInvestigationCases": [
+    {
+      "name": "Wilson's Disease with Red Flags - SHOULD NOT EXIT EARLY",
+      "case": {
+        "patientId": "FULL-INVEST-001",
+        "age": 32,
+        "sex": "male",
+        "chiefComplaint": "Progressive weakness, tremors, and personality changes",
+        "symptoms": [
+          "progressive muscle weakness",
+          "tremors in hands",
+          "difficulty concentrating",
+          "personality changes",
+          "mild depression",
+          "occasional nausea"
+        ],
+        "medicalHistory": [
+          "father died of liver disease at age 40",
+          "no other significant medical history"
+        ],
+        "medications": ["multivitamin", "occasional ibuprofen"]
+      }
+    },
+    {
+      "name": "Complex Multi-System Case - SHOULD NOT EXIT EARLY",
+      "case": {
+        "patientId": "FULL-INVEST-002",
+        "age": 45,
+        "sex": "female",
+        "chiefComplaint": "Fatigue, joint pain, and shortness of breath",
+        "symptoms": [
+          "fatigue",
+          "joint pain",
+          "shortness of breath",
+          "chest pain",
+          "weakness",
+          "kidney problems"
+        ],
+        "medicalHistory": ["recent travel to Southeast Asia"],
+        "medications": ["aspirin"]
+      }
+    }
+  ]
+}

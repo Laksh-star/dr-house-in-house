@@ -1,0 +1,56 @@
+{
+  "patientId": "PATIENT-003",
+  "age": 58,
+  "sex": "male",
+  "chiefComplaint": "Crushing chest pain radiating to left arm, started 2 hours ago",
+  "symptoms": [
+    "crushing chest pain",
+    "left arm pain",
+    "shortness of breath",
+    "nausea",
+    "sweating",
+    "dizziness"
+  ],
+  "medicalHistory": [
+    "hypertension",
+    "diabetes type 2",
+    "smoking history (20 pack-years)",
+    "family history of heart disease"
+  ],
+  "medications": [
+    "metformin 1000mg twice daily",
+    "lisinopril 10mg daily",
+    "aspirin 81mg daily"
+  ],
+  "labResults": [
+    {
+      "testName": "Troponin I",
+      "value": 15.2,
+      "unit": "ng/mL",
+      "referenceRange": "<0.04"
+    },
+    {
+      "testName": "CK-MB",
+      "value": 45,
+      "unit": "ng/mL",
+      "referenceRange": "<6.3"
+    },
+    {
+      "testName": "Glucose",
+      "value": 180,
+      "unit": "mg/dL",
+      "referenceRange": "70-100"
+    }
+  ],
+  "imagingResults": [
+    {
+      "imagingType": "xray",
+      "bodyRegion": "chest",
+      "findings": [
+        "mild cardiomegaly",
+        "no acute pulmonary edema",
+        "clear lung fields"
+      ]
+    }
+  ]
+}

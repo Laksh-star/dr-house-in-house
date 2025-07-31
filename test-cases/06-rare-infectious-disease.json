@@ -1,0 +1,60 @@
+{
+  "patientId": "PATIENT-006",
+  "age": 29,
+  "sex": "male",
+  "chiefComplaint": "High fever, night sweats, and enlarged lymph nodes after returning from cave exploration",
+  "symptoms": [
+    "high fever",
+    "night sweats",
+    "enlarged lymph nodes",
+    "cough",
+    "chest pain",
+    "fatigue",
+    "weight loss"
+  ],
+  "medicalHistory": [
+    "recent spelunking trip to Ohio caves",
+    "healthy otherwise",
+    "no chronic medications"
+  ],
+  "medications": [
+    "ibuprofen for fever"
+  ],
+  "labResults": [
+    {
+      "testName": "White Blood Cell Count",
+      "value": 12000,
+      "unit": "cells/μL",
+      "referenceRange": "4000-11000"
+    },
+    {
+      "testName": "Eosinophils",
+      "value": 15,
+      "unit": "%",
+      "referenceRange": "1-4"
+    },
+    {
+      "testName": "Histoplasma Antigen",
+      "value": "positive",
+      "unit": "",
+      "referenceRange": "negative"
+    },
+    {
+      "testName": "LDH",
+      "value": 650,
+      "unit": "U/L",
+      "referenceRange": "140-280"
+    }
+  ],
+  "imagingResults": [
+    {
+      "imagingType": "ct",
+      "bodyRegion": "chest",
+      "findings": [
+        "bilateral pulmonary nodules",
+        "mediastinal lymphadenopathy",
+        "ground glass opacities"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "patientId": "PATIENT-004",
+  "age": 45,
+  "sex": "male",
+  "chiefComplaint": "Progressive weakness, tremors, and behavioral changes over 6 months",
+  "symptoms": [
+    "progressive muscle weakness",
+    "tremors in hands",
+    "difficulty walking",
+    "memory problems",
+    "personality changes",
+    "depression",
+    "slurred speech"
+  ],
+  "medicalHistory": [
+    "worked in copper mine for 20 years",
+    "brother died of liver disease at 35",
+    "no significant medical history"
+  ],
+  "medications": [
+    "none"
+  ],
+  "labResults": [
+    {
+      "testName": "Serum Copper",
+      "value": 180,
+      "unit": "μg/dL",
+      "referenceRange": "70-140"
+    },
+    {
+      "testName": "Ceruloplasmin",
+      "value": 8,
+      "unit": "mg/dL",
+      "referenceRange": "20-50"
+    },
+    {
+      "testName": "24-hour Urine Copper",
+      "value": 250,
+      "unit": "μg/24hr",
+      "referenceRange": "<40"
+    },
+    {
+      "testName": "ALT",
+      "value": 120,
+      "unit": "U/L",
+      "referenceRange": "7-56"
+    }
+  ],
+  "imagingResults": [
+    {
+      "imagingType": "mri",
+      "bodyRegion": "brain",
+      "findings": [
+        "bilateral basal ganglia hyperintensities",
+        "mild cortical atrophy",
+        "increased signal in putamen"
+      ]
+    }
+  ]
+}

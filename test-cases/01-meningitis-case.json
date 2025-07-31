@@ -1,0 +1,47 @@
+{
+  "patientId": "PATIENT-001",
+  "age": 22,
+  "sex": "female",
+  "chiefComplaint": "Severe headache, neck stiffness, and high fever for 12 hours",
+  "symptoms": [
+    "severe headache",
+    "neck stiffness",
+    "high fever",
+    "photophobia",
+    "nausea",
+    "vomiting",
+    "confusion"
+  ],
+  "medicalHistory": [
+    "recent upper respiratory infection",
+    "college student in dormitory"
+  ],
+  "medications": [
+    "birth control pills"
+  ],
+  "labResults": [
+    {
+      "testName": "White Blood Cell Count",
+      "value": 18000,
+      "unit": "cells/μL",
+      "referenceRange": "4000-11000"
+    },
+    {
+      "testName": "C-Reactive Protein",
+      "value": 120,
+      "unit": "mg/L",
+      "referenceRange": "<3"
+    }
+  ],
+  "imagingResults": [
+    {
+      "imagingType": "ct",
+      "bodyRegion": "brain",
+      "findings": [
+        "no acute hemorrhage",
+        "mild cerebral edema",
+        "no mass effect"
+      ]
+    }
+  ]
+}

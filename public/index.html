@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. House Diagnostic System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 Dr. House Diagnostic System</h1>
+            <p>Multi-Agent Medical Diagnosis - Princeton-Plainsboro Teaching Hospital</p>
+        </header>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2>📋 Patient Case Entry</h2>
+                <form id="patientForm">
+                    <!-- Basic Patient Information -->
+                    <div class="form-group">
+                        <h3>👤 Patient Information</h3>
+                        <div class="input-row">
+                            <div class="input-field">
+                                <label for="patientId">Patient ID:</label>
+                                <input type="text" id="patientId" name="patientId" placeholder="e.g., PATIENT-001" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="age">Age:</label>
+                                <input type="number" id="age" name="age" min="1" max="120" placeholder="35" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="sex">Sex:</label>
+                                <select id="sex" name="sex" required>
+                                    <option value="">Select...</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chief Complaint -->
+                    <div class="form-group">
+                        <h3>🩺 Chief Complaint</h3>
+                        <textarea id="chiefComplaint" name="chiefComplaint" 
+                                placeholder="What is the patient's main concern? (e.g., 'Severe headache and confusion for 3 days')" 
+                                required></textarea>
+                    </div>
+
+                    <!-- Symptoms -->
+                    <div class="form-group">
+                        <h3>🔬 Symptoms</h3>
+                        <div class="symptoms-grid">
+                            <div class="symptom-category">
+                                <h4>Neurological</h4>
+                                <label><input type="checkbox" name="symptoms" value="headache"> Headache</label>
+                                <label><input type="checkbox" name="symptoms" value="confusion"> Confusion</label>
+                                <label><input type="checkbox" name="symptoms" value="dizziness"> Dizziness</label>
+                                <label><input type="checkbox" name="symptoms" value="seizures"> Seizures</label>
+                                <label><input type="checkbox" name="symptoms" value="memory loss"> Memory Loss</label>
+                                <label><input type="checkbox" name="symptoms" value="weakness"> Weakness</label>
+                            </div>
+                            
+                            <div class="symptom-category">
+                                <h4>Constitutional</h4>
+                                <label><input type="checkbox" name="symptoms" value="fever"> Fever</label>
+                                <label><input type="checkbox" name="symptoms" value="fatigue"> Fatigue</label>
+                                <label><input type="checkbox" name="symptoms" value="weight loss"> Weight Loss</label>
+                                <label><input type="checkbox" name="symptoms" value="night sweats"> Night Sweats</label>
+                                <label><input type="checkbox" name="symptoms" value="chills"> Chills</label>
+                            </div>
+                            
+                            <div class="symptom-category">
+                                <h4>Cardiovascular</h4>
+                                <label><input type="checkbox" name="symptoms" value="chest pain"> Chest Pain</label>
+                                <label><input type="checkbox" name="symptoms" value="shortness of breath"> Shortness of Breath</label>
+                                <label><input type="checkbox" name="symptoms" value="palpitations"> Palpitations</label>
+                                <label><input type="checkbox" name="symptoms" value="leg swelling"> Leg Swelling</label>
+                            </div>
+                            
+                            <div class="symptom-category">
+                                <h4>Gastrointestinal</h4>
+                                <label><input type="checkbox" name="symptoms" value="nausea"> Nausea</label>
+                                <label><input type="checkbox" name="symptoms" value="vomiting"> Vomiting</label>
+                                <label><input type="checkbox" name="symptoms" value="abdominal pain"> Abdominal Pain</label>
+                                <label><input type="checkbox" name="symptoms" value="diarrhea"> Diarrhea</label>
+                            </div>
+                            
+                            <div class="symptom-category">
+                                <h4>Other</h4>
+                                <label><input type="checkbox" name="symptoms" value="rash"> Rash</label>
+                                <label><input type="checkbox" name="symptoms" value="joint pain"> Joint Pain</label>
+                                <label><input type="checkbox" name="symptoms" value="vision changes"> Vision Changes</label>
+                                <label><input type="checkbox" name="symptoms" value="hearing loss"> Hearing Loss</label>
+                            </div>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label for="otherSymptoms">Additional Symptoms:</label>
+                            <input type="text" id="otherSymptoms" name="otherSymptoms" 
+                                   placeholder="Enter other symptoms separated by commas">
+                        </div>
+                    </div>
+
+                    <!-- Medical History -->
+                    <div class="form-group">
+                        <h3>📖 Medical History</h3>
+                        <textarea id="medicalHistory" name="medicalHistory" 
+                                placeholder="Past medical history, surgeries, hospitalizations... (e.g., 'Diabetes Type 2, Hypertension, Appendectomy 2015')"></textarea>
+                    </div>
+
+                    <!-- Current Medications -->
+                    <div class="form-group">
+                        <h3>💊 Current Medications</h3>
+                        <textarea id="medications" name="medications" 
+                                placeholder="Current medications and dosages... (e.g., 'Metformin 500mg BID, Lisinopril 10mg daily')"></textarea>
+                    </div>
+
+                    <!-- Lab Results (Optional) -->
+                    <div class="form-group">
+                        <h3>🧪 Lab Results (Optional)</h3>
+                        <div class="lab-grid">
+                            <div class="lab-field">
+                                <label for="wbc">WBC Count:</label>
+                                <input type="number" id="wbc" name="wbc" placeholder="e.g., 8500" step="100">
+                                <span class="unit">cells/μL</span>
+                            </div>
+                            <div class="lab-field">
+                                <label for="hemoglobin">Hemoglobin:</label>
+                                <input type="number" id="hemoglobin" name="hemoglobin" placeholder="e.g., 14.2" step="0.1">
+                                <span class="unit">g/dL</span>
+                            </div>
+                            <div class="lab-field">
+                                <label for="glucose">Glucose:</label>
+                                <input type="number" id="glucose" name="glucose" placeholder="e.g., 95" step="1">
+                                <span class="unit">mg/dL</span>
+                            </div>
+                            <div class="lab-field">
+                                <label for="creatinine">Creatinine:</label>
+                                <input type="number" id="creatinine" name="creatinine" placeholder="e.g., 1.0" step="0.1">
+                                <span class="unit">mg/dL</span>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <label for="additionalLabs">Additional Lab Results:</label>
+                            <textarea id="additionalLabs" name="additionalLabs" 
+                                    placeholder="Other lab values... (e.g., 'ALT: 45 U/L, AST: 38 U/L')"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" id="submitBtn" class="submit-btn">
+                            🔬 Run Dr. House Diagnostic Team
+                        </button>
+                        <button type="button" id="clearBtn" class="clear-btn">
+                            🗑️ Clear Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2>🏥 Diagnostic Results</h2>
+                <div id="loadingSpinner" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>The diagnostic team is analyzing the case...</p>
+                </div>
+                <div id="resultsContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

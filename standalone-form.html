@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. House Diagnostic System - Standalone</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh; padding: 20px;
+        }
+        .container { 
+            max-width: 800px; margin: 0 auto; background: white; 
+            border-radius: 15px; padding: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; }
+        .form-group { margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; }
+        .form-group h3 { color: #2c3e50; margin-bottom: 10px; }
+        label { display: block; margin: 8px 0; font-weight: 500; }
+        input, select, textarea { 
+            width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; 
+            font-size: 1rem; margin-top: 5px;
+        }
+        input:focus, select:focus, textarea:focus { border-color: #3498db; outline: none; }
+        .symptoms { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+        .symptom-group { background: white; padding: 10px; border-radius: 5px; }
+        .symptom-group h4 { margin-bottom: 8px; color: #34495e; }
+        .symptom-group label { display: flex; align-items: center; margin: 5px 0; font-weight: normal; }
+        .symptom-group input[type="checkbox"] { width: auto; margin-right: 8px; }
+        .btn { 
+            background: linear-gradient(45deg, #27ae60, #2ecc71); color: white; 
+            padding: 15px 30px; border: none; border-radius: 8px; font-size: 1.1rem; 
+            cursor: pointer; margin: 10px 5px; min-width: 200px;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn:disabled { background: #bdc3c7; cursor: not-allowed; transform: none; }
+        .clear-btn { background: linear-gradient(45deg, #e74c3c, #c0392b); }
+        .results { 
+            margin-top: 30px; padding: 20px; background: #f8f9fa; 
+            border-radius: 8px; border-left: 4px solid #e74c3c; display: none;
+        }
+        .loading { text-align: center; padding: 20px; }
+        .spinner { 
+            border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; 
+            width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 15px;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .diagnosis-card { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; padding: 20px; border-radius: 10px; margin: 15px 0;
+        }
+        .error { background: #fee; color: #c0392b; padding: 15px; border-radius: 5px; border-left: 4px solid #e74c3c; }
+        .success { background: #efe; color: #27ae60; padding: 15px; border-radius: 5px; border-left: 4px solid #2ecc71; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 Dr. House Diagnostic System</h1>
+        
+        <form id="diagnosticForm">
+            <div class="form-group">
+                <h3>👤 Patient Information</h3>
+                <label>Patient ID: <input type="text" id="patientId" required></label>
+                <label>Age: <input type="number" id="age" min="1" max="120" required></label>
+                <label>Sex: 
+                    <select id="sex" required>
+                        <option value="">Select...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+                <label>Chief Complaint: 
+                    <textarea id="chiefComplaint" required placeholder="What is the patient's main concern?"></textarea>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <h3>🔬 Symptoms</h3>
+                <div class="symptoms">
+                    <div class="symptom-group">
+                        <h4>Neurological</h4>
+                        <label><input type="checkbox" value="headache"> Headache</label>
+                        <label><input type="checkbox" value="confusion"> Confusion</label>
+                        <label><input type="checkbox" value="dizziness"> Dizziness</label>
+                        <label><input type="checkbox" value="seizures"> Seizures</label>
+                        <label><input type="checkbox" value="weakness"> Weakness</label>
+                    </div>
+                    <div class="symptom-group">
+                        <h4>Constitutional</h4>
+                        <label><input type="checkbox" value="fever"> Fever</label>
+                        <label><input type="checkbox" value="fatigue"> Fatigue</label>
+                        <label><input type="checkbox" value="weight loss"> Weight Loss</label>
+                        <label><input type="checkbox" value="night sweats"> Night Sweats</label>
+                        <label><input type="checkbox" value="chills"> Chills</label>
+                    </div>
+                    <div class="symptom-group">
+                        <h4>Cardiovascular</h4>
+                        <label><input type="checkbox" value="chest pain"> Chest Pain</label>
+                        <label><input type="checkbox" value="shortness of breath"> Shortness of Breath</label>
+                        <label><input type="checkbox" value="palpitations"> Palpitations</label>
+                    </div>
+                    <div class="symptom-group">
+                        <h4>Other</h4>
+                        <label><input type="checkbox" value="nausea"> Nausea</label>
+                        <label><input type="checkbox" value="vomiting"> Vomiting</label>
+                        <label><input type="checkbox" value="rash"> Rash</label>
+                        <label><input type="checkbox" value="joint pain"> Joint Pain</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Medical History: 
+                    <textarea id="medicalHistory" placeholder="Past medical history (comma-separated)"></textarea>
+                </label>
+                <label>Current Medications: 
+                    <textarea id="medications" placeholder="Current medications (comma-separated)"></textarea>
+                </label>
+            </div>
+
+            <div style="text-align: center;">
+                <button type="submit" class="btn">🔬 Run Dr. House Diagnostic Team</button>
+                <button type="button" class="btn clear-btn" onclick="clearForm()">🗑️ Clear Form</button>
+            </div>
+        </form>
+
+        <div id="results" class="results">
+            <div id="loading" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>The diagnostic team is analyzing the case...</p>
+            </div>
+            <div id="resultsContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-generate patient ID
+        document.getElementById('patientId').value = 'PATIENT-' + Math.random().toString(36).substr(2, 6).toUpperCase();
+
+        document.getElementById('diagnosticForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const btn = e.target.querySelector('button[type="submit"]');
+            const results = document.getElementById('results');
+            const loading = document.getElementById('loading');
+            const resultsContent = document.getElementById('resultsContent');
+            
+            // Show loading
+            btn.disabled = true;
+            btn.textContent = '🔬 Analyzing...';
+            results.style.display = 'block';
+            loading.style.display = 'block';
+            resultsContent.innerHTML = '';
+            
+            try {
+                // Collect form data
+                const symptoms = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
+                const medicalHistory = document.getElementById('medicalHistory').value.split(',').map(s => s.trim()).filter(s => s);
+                const medications = document.getElementById('medications').value.split(',').map(s => s.trim()).filter(s => s);
+                
+                const patientData = {
+                    patientId: document.getElementById('patientId').value,
+                    age: parseInt(document.getElementById('age').value),
+                    sex: document.getElementById('sex').value,
+                    chiefComplaint: document.getElementById('chiefComplaint').value,
+                    symptoms: symptoms,
+                    medicalHistory: medicalHistory.length > 0 ? medicalHistory : ['none'],
+                    medications: medications.length > 0 ? medications : ['none']
+                };
+                
+                // Call API
+                const response = await fetch('http://localhost:4111/api/workflows/house-md-diagnostic/run', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(patientData)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${await response.text()}`);
+                }
+                
+                const result = await response.json();
+                displayResults(result);
+                
+            } catch (error) {
+                console.error('Error:', error);
+                resultsContent.innerHTML = `
+                    <div class="error">
+                        <strong>❌ Error:</strong> ${error.message}
+                        <br><br>
+                        <strong>Make sure:</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li>Your Mastra server is running (npm run dev)</li>
+                            <li>The server is accessible at http://localhost:4111</li>
+                            <li>All required fields are filled</li>
+                        </ul>
+                    </div>
+                `;
+            } finally {
+                btn.disabled = false;
+                btn.textContent = '🔬 Run Dr. House Diagnostic Team';
+                loading.style.display = 'none';
+            }
+        });
+        
+        function displayResults(diagnosis) {
+            const resultsContent = document.getElementById('resultsContent');
+            
+            if (diagnosis && diagnosis.finalDiagnosis) {
+                const dx = diagnosis.finalDiagnosis;
+                resultsContent.innerHTML = `
+                    <div class="diagnosis-card">
+                        <h3>🎯 Final Diagnosis</h3>
+                        <p><strong>Condition:</strong> ${dx.diagnosis}</p>
+                        <p><strong>Confidence:</strong> ${dx.confidence}</p>
+                        <p><strong>Reasoning:</strong> ${dx.reasoning}</p>
+                        <p><strong>Treatment:</strong> ${dx.treatment}</p>
+                        <p><strong>Prognosis:</strong> ${dx.prognosis}</p>
+                    </div>
+                    <div style="background: #2c3e50; color: white; padding: 15px; border-radius: 5px; font-style: italic; text-align: center;">
+                        <strong>Dr. House says:</strong> "${dx.house_comment}"
+                    </div>
+                    <div class="success">
+                        <strong>✅ Diagnosis Complete!</strong> Remember: This is for educational purposes only.
+                    </div>
+                `;
+            } else {
+                resultsContent.innerHTML = '<div class="error">Unexpected response format.</div>';
+            }
+        }
+        
+        function clearForm() {
+            if (confirm('Clear all form data?')) {
+                document.getElementById('diagnosticForm').reset();
+                document.getElementById('results').style.display = 'none';
+                document.getElementById('patientId').value = 'PATIENT-' + Math.random().toString(36).substr(2, 6).toUpperCase();
+            }
+        }
+    </script>
+</body>
+</html>

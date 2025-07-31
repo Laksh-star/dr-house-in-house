@@ -1,0 +1,61 @@
+{
+  "patientId": "PATIENT-005",
+  "age": 34,
+  "sex": "female",
+  "chiefComplaint": "Severe abdominal pain, nausea, and weakness after working in garage",
+  "symptoms": [
+    "severe abdominal pain",
+    "nausea",
+    "vomiting",
+    "muscle weakness",
+    "metallic taste in mouth",
+    "blue line on gums",
+    "constipation",
+    "irritability"
+  ],
+  "medicalHistory": [
+    "recently started restoring vintage cars",
+    "works in poorly ventilated garage",
+    "no significant medical history"
+  ],
+  "medications": [
+    "occasional antacids"
+  ],
+  "labResults": [
+    {
+      "testName": "Blood Lead Level",
+      "value": 85,
+      "unit": "μg/dL",
+      "referenceRange": "<5"
+    },
+    {
+      "testName": "Hemoglobin",
+      "value": 9.2,
+      "unit": "g/dL",
+      "referenceRange": "12.0-16.0"
+    },
+    {
+      "testName": "Basophilic Stippling",
+      "value": "present",
+      "unit": "",
+      "referenceRange": "absent"
+    },
+    {
+      "testName": "Creatinine",
+      "value": 1.8,
+      "unit": "mg/dL",
+      "referenceRange": "0.6-1.1"
+    }
+  ],
+  "imagingResults": [
+    {
+      "imagingType": "xray",
+      "bodyRegion": "abdomen",
+      "findings": [
+        "no acute abnormalities",
+        "possible lead lines in long bones",
+        "normal bowel gas pattern"
+      ]
+    }
+  ]
+}

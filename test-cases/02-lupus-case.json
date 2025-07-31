@@ -1,0 +1,49 @@
+{
+  "patientId": "PATIENT-002",
+  "age": 28,
+  "sex": "female",
+  "chiefComplaint": "Joint pain, butterfly rash, and fatigue for 3 months",
+  "symptoms": [
+    "joint pain",
+    "butterfly rash on face",
+    "fatigue",
+    "hair loss",
+    "sensitivity to sunlight",
+    "mouth ulcers",
+    "raynaud's phenomenon"
+  ],
+  "medicalHistory": [
+    "family history of autoimmune disease",
+    "previous miscarriage"
+  ],
+  "medications": [
+    "ibuprofen as needed",
+    "multivitamin"
+  ],
+  "labResults": [
+    {
+      "testName": "Antinuclear Antibodies (ANA)",
+      "value": "1:640",
+      "unit": "titer",
+      "referenceRange": "<1:80"
+    },
+    {
+      "testName": "Anti-dsDNA",
+      "value": 180,
+      "unit": "IU/mL",
+      "referenceRange": "<30"
+    },
+    {
+      "testName": "Complement C3",
+      "value": 65,
+      "unit": "mg/dL",
+      "referenceRange": "90-180"
+    },
+    {
+      "testName": "ESR",
+      "value": 85,
+      "unit": "mm/hr",
+      "referenceRange": "<20"
+    }
+  ]
+}

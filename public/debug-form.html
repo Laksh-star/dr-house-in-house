@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Dr. House Form</title>
+</head>
+<body>
+    <h1>Debug Form</h1>
+    <button onclick="testConnection()">Test Mastra Connection</button>
+    <button onclick="testWorkflow()">Test Workflow</button>
+    <div id="output"></div>
+
+    <script>
+        async function testConnection() {
+            const output = document.getElementById('output');
+            output.innerHTML = 'Testing connection...';
+            
+            try {
+                const response = await fetch('http://localhost:4112/api');
+                const text = await response.text();
+                output.innerHTML = `<h3>Connection Test:</h3><pre>${text}</pre>`;
+            } catch (error) {
+                output.innerHTML = `<h3>Connection Error:</h3><pre>${error.message}</pre>`;
+            }
+        }
+
+        async function testWorkflow() {
+            const output = document.getElementById('output');
+            output.innerHTML = 'Testing workflow...';
+            
+            const testData = {
+                patientId: "TEST-001",
+                age: 30,
+                sex: "male",
+                chiefComplaint: "Test case",
+                symptoms: ["headache", "fever"],
+                medicalHistory: ["none"],
+                medications: ["none"]
+            };
+            
+            try {
+                const response = await fetch('http://localhost:4112/api/workflows/house-md-diagnostic/run', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+                
+                const result = await response.text();
+                output.innerHTML = `<h3>Workflow Test (${response.status}):</h3><pre>${result}</pre>`;
+            } catch (error) {
+                output.innerHTML = `<h3>Workflow Error:</h3><pre>${error.message}</pre>`;
+            }
+        }
+    </script>
+</body>
+</html>
