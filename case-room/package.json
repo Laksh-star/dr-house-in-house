@@ -1,0 +1,7 @@
+{
+  "name": "case-room-external-decision", "version": "1.0.0", "private": true, "type": "module",
+  "engines": {"node": ">=22.13.0"},
+  "scripts": {"cli": "tsx src/cli.ts", "typecheck": "tsc --noEmit", "build": "tsc -p tsconfig.build.json", "test": "tsx --test tests/*.test.ts", "test:report": "tsx --test --test-reporter=tap tests/*.test.ts > reports/tests.tap"},
+  "dependencies": {"@mastra/core": "1.64.0", "@mastra/libsql": "1.22.3", "zod": "^4.3.6"},
+  "devDependencies": {"mastra": "1.27.3", "tsx": "^4.21.0", "typescript": "^5.9.3", "@types/node": "^24.10.0"}
+}
