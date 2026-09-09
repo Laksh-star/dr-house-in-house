@@ -1,5 +1,7 @@
 # The Night Shift — captured replay template
 
+> **Using the replay rather than building it? [Start with the User Guide](../USER-GUIDE.md).** The 3D page plays recorded events; fresh investigation choices happen in Hyperagent, not in this page.
+
 `replay-template.html` is a standalone, vanilla HTML/CSS/JavaScript presentation. It has no app dependencies and makes no agent, model, or application API calls. Its only network resources are pinned Three.js 0.160.0 and Google Fonts; blocked resources leave a usable 2D replay with system-font fallbacks.
 
 ## Export contract

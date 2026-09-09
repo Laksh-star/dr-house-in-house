@@ -1,5 +1,17 @@
 # The Case Room — Astra × Mastra workflow showcase
 
+## New here? Start with the experience, not the code
+
+**[Read the spoiler-free User Guide →](case-room/USER-GUIDE.md)**
+
+- **Watch:** the published 3D page replays recorded events. Play does not call Astra or start Mastra.
+- **Participate live:** ask the assistant in the Hyperagent project conversation to start a fresh run and pause after each clue. The assistant runs the workflow; you choose in ordinary language.
+- **Expect:** one fictional case, not a live public diagnostic app. The page and conversation are not automatically synchronized.
+
+You do not need terminal commands to participate in a guided Hyperagent session. The setup instructions below are for developers.
+
+---
+
 The new **[Case Room package](case-room/README.md)** implements a fictional investigation using Mastra **1.64.0**, typed external decisions, durable suspend/resume, and a Three.js replay. Astra reasons through the existing Hyperagent session; **no separate model API key is required for this new execution path**.
 
 - [Setup, CLI, persistence, and limitations](case-room/README.md)

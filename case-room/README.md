@@ -1,5 +1,7 @@
 # Case Room — external-decision workflow
 
+> **Here to try it? [Read the spoiler-free User Guide](USER-GUIDE.md) first.** It explains watching the recorded 3D replay, starting a live investigation in Hyperagent, the controls, and what to expect. You do not need CLI commands for a guided chat session. This developer reference below contains implementation details and story spoilers.
+
 A small, **real Mastra workflow** for one authored fictional investigation, **The Night Shift**. Three archive staff report headache and nausea on an overnight shift; external decisions explore fatigue, food, and air hypotheses. The story has a fixed equipment-fault answer, not a generated diagnosis.
 
 **Fiction only. Not medical advice, a real diagnosis, clinical evaluation, or treatment guidance. The builder knows the answer. This is not a blinded benchmark or evidence that a model can diagnose.** Rationale and perspectives are unverified external opinions; only predefined scenario records become factual story evidence.
