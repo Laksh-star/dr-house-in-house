@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>The Night Shift — The Case Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b1119;--panel:#121b25;--edge:#2a3540;--paper:#efe9dd;--muted:#a4afb8;--amber:#dfa96a;--blue:#7c9aac;--mono:'IBM Plex Mono',monospace;--sans:'DM Sans',sans-serif;--serif:'Instrument Serif',Georgia,serif}*{box-sizing:border-box}body{margin:0;background:var(--ink);color:var(--paper);font:14px/1.55 var(--sans)}button,a,summary{touch-action:manipulation}button{font:inherit;color:inherit;cursor:pointer}button:disabled{opacity:.36;cursor:not-allowed}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--amber);outline-offset:4px}a{color:var(--amber)}button{border:1px solid var(--edge);background:transparent;border-radius:4px}button:hover:not(:disabled){border-color:var(--amber);background:#dfa96a0c}button[aria-pressed="true"]{border-color:var(--amber);color:var(--amber)}.skip{position:fixed;top:-80px;left:20px;z-index:20;background:var(--paper);color:var(--ink);padding:10px}.skip:focus{top:12px}.shell{max-width:1680px;margin:auto;padding:0 40px}.masthead{height:83px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--edge);gap:20px}.brand{display:flex;align-items:center;gap:13px;font-size:12px;font-weight:700;letter-spacing:.17em}.mark{display:grid;grid-template-columns:repeat(2,5px);gap:4px;transform:rotate(-6deg)}.mark i{height:17px;background:var(--amber)}.mark i:nth-child(2){height:10px}.eyebrow,.micro,.badge{font:10px/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase}.mast-right{display:flex;align-items:center;gap:18px;color:var(--muted)}.badge{border:1px solid #70583e;color:var(--amber);padding:4px 8px;letter-spacing:.08em}.intro{padding:31px 0 25px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}.intro .eyebrow{color:var(--amber);margin:0 0 9px}.intro h1{font:clamp(40px,4.3vw,69px)/1.02 var(--serif);letter-spacing:-.03em;margin:0}.intro h1 em{color:#96a9b5;font-weight:400}.intro p{max-width:510px;color:var(--muted);margin:13px 0 0;font-size:13px}.context{max-width:265px;color:var(--muted);text-align:right;font-size:11px}.context strong{display:block;color:var(--paper);font:10px/1.6 var(--mono);letter-spacing:.09em;margin-bottom:5px}.context span{display:block}.workspace{display:grid;grid-template-columns:minmax(0,1.38fr) minmax(315px,1fr);border:1px solid var(--edge);background:var(--panel)}.scene-column{min-width:0;border-right:1px solid var(--edge);display:flex;flex-direction:column}.scene-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-bottom:1px solid var(--edge);min-height:59px}.scene-head .eyebrow{color:var(--muted)}.scene-tools{display:flex;gap:7px}.scene-tools button{font:10px var(--mono);padding:7px 9px;white-space:nowrap}.scene{position:relative;min-height:390px;flex:1;background:#101a25;overflow:hidden;isolation:isolate}.scene canvas{display:block;position:absolute;inset:0;width:100%;height:100%;z-index:1;touch-action:pan-y}.scene-vignette{position:absolute;inset:0;pointer-events:none;z-index:2;box-shadow:inset 0 0 75px 15px #0a11194d}.scene-label{position:absolute;top:20px;left:20px;z-index:3;pointer-events:none}.scene-label .micro{color:#b7c5ce}.scene-label p{font:22px var(--serif);margin:4px 0;color:#d2d9dc}.scene-note{position:absolute;left:20px;bottom:18px;right:20px;z-index:3;display:flex;justify-content:space-between;gap:12px;pointer-events:none}.scene-note span{font:9px/1.5 var(--mono);letter-spacing:.04em;color:#b4c0c8;padding:5px 7px;background:#0b1119c9;border:1px solid #39465290}.fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:66px 28px 60px;background:radial-gradient(ellipse at 70% 75%,#5a432c55,transparent 55%),linear-gradient(140deg,#172533,#101721)}.fallback[hidden]{display:none}.plan{width:min(460px,100%);aspect-ratio:1.55;position:relative;border:1px solid #5b6c7755;background:repeating-linear-gradient(0deg,transparent 0 29px,#34495715 29px 30px),repeating-linear-gradient(90deg,transparent 0 29px,#34495715 29px 30px);transform:perspective(800px) rotateX(18deg) rotateZ(-8deg);box-shadow:18px 22px 50px #020509}.plan:before{content:'';position:absolute;top:-5px;left:10%;width:48%;border-top:7px solid #66889a77}.plan .desk{position:absolute;bottom:18%;right:15%;width:59%;height:42%;background:linear-gradient(115deg,#64503d,#44372e);border:1px solid #97806488;box-shadow:8px 10px 0 #080d1360}.plan .folder{position:absolute;left:18%;top:23%;height:53%;width:36%;background:#c7b69b;transform:rotate(-6deg);box-shadow:3px 3px 8px #0005}.plan .folder:after{content:'CASE DOSSIER';font:7px var(--mono);color:#554535;position:absolute;top:20%;left:12%;border-top:2px solid #765b42;padding-top:5px}.plan .lamp{position:absolute;right:8%;top:8%;width:28px;height:28px;border-radius:50%;background:#c5a16e;box-shadow:0 0 40px 30px #ce9a431a;border:5px solid #373b39}.plan .board{position:absolute;top:11%;left:15%;height:14%;width:57%;border:1px solid #657c85;background:#243845;display:flex;gap:12%;padding:5%}.plan .board i{height:13px;width:19px;background:#b3bbaf}.plan .chair{position:absolute;bottom:3%;right:38%;width:21%;height:12%;border:1px solid #5f747e;background:#273a47}.scene-foot{padding:15px 20px;background:#0e1720;border-top:1px solid var(--edge);display:flex;justify-content:space-between;gap:15px;font-size:11px;color:var(--muted)}.scene-foot strong{font-weight:500;color:var(--paper)}.evidence-panel{display:flex;flex-direction:column;min-width:0;padding:24px 26px 21px}.panel-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px;color:var(--muted)}.panel-top .badge{border-color:var(--edge);color:var(--muted);font-size:9px}.event-title{font:31px/1.1 var(--serif);margin:0 0 13px;overflow-wrap:anywhere}.event-summary{font-size:13px;color:#bbc5cb;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;max-height:143px;overflow:auto;scrollbar-width:thin}.event-time{font:10px var(--mono);color:#8799a6;margin:15px 0 22px}.evidence-heading{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--edge);padding-top:18px;margin-top:0;gap:12px}.evidence-heading h3{font:10px var(--mono);letter-spacing:.1em;font-weight:400;margin:0;color:var(--muted)}.evidence-heading span{font:10px var(--mono);color:var(--amber)}.evidence-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}.evidence-card{text-align:left;padding:12px;background:#18232d;min-height:81px;border:1px solid #34434f;position:relative;overflow-wrap:anywhere}.evidence-card .micro{font-size:8px;color:#98aab5;display:block;margin-bottom:5px;letter-spacing:.07em}.evidence-card strong{font-weight:500;font-size:12px;line-height:1.3;display:block}.evidence-card[aria-pressed="true"]:before{content:'';position:absolute;top:0;bottom:0;left:0;width:2px;background:var(--amber)}.empty-evidence{font-size:12px;color:var(--muted);padding:16px 0;grid-column:1/-1}.evidence-detail{margin-top:auto;border-left:2px solid #8c704e;padding:3px 0 3px 13px;min-height:62px}.evidence-detail h4{font-size:12px;font-weight:500;margin:0 0 5px;color:#dfbc91}.evidence-detail p{font-size:11px;color:var(--muted);margin:0;max-height:105px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}.transport{padding:21px 0 0}.transport-top{display:flex;align-items:center;gap:17px;justify-content:space-between;margin-bottom:16px}.controls{display:flex;align-items:center;gap:7px}.controls button{height:37px;min-width:38px;padding:7px 12px;font-size:14px}.controls .play{min-width:94px;background:var(--paper);border-color:var(--paper);color:var(--ink);font-size:12px;font-weight:600}.controls .play:hover:not(:disabled){background:var(--amber);color:var(--ink)}.play-icon{font-size:10px;margin-right:8px}.play-status{font:10px var(--mono);color:var(--muted)}.progress-label{font:10px var(--mono);color:var(--muted);text-align:right}.progress-label strong{color:var(--paper);font-weight:400}.progress{display:flex;align-items:center;gap:12px}.progress input{flex:1;min-width:0;height:16px;accent-color:var(--amber);cursor:pointer}.progress span{font:10px var(--mono);color:var(--muted);white-space:nowrap}.event-rail{display:flex;gap:0;margin:13px 0 0;padding:0 0 15px;list-style:none;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#536371 transparent}.event-rail li{flex:0 0 168px;min-width:0;border-top:1px solid var(--edge)}.event-rail button{width:100%;border:0;border-top:2px solid transparent;border-radius:0;padding:13px 12px 10px;text-align:left;height:100%;position:relative}.event-rail button[aria-current="step"]{border-top-color:var(--amber);background:#dfa96a08}.event-rail .seq{font:9px var(--mono);color:#778b99;display:block;margin-bottom:5px}.event-rail .rail-title{font-size:11px;display:block;color:#a5b3bd;max-height:3em;line-height:1.5;overflow:hidden;overflow-wrap:anywhere}.event-rail button[aria-current="step"] .seq,.event-rail button[aria-current="step"] .rail-title{color:#dfbc91}.bottom{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;padding:20px 0 30px;border-top:1px solid var(--edge);margin-top:6px}.disclaimer{font-size:11px;color:#8798a4;margin:0;max-width:570px}.disclaimer strong{color:#a4b4bf;font-weight:500}.receipt{min-width:0}summary{cursor:pointer;font:10px var(--mono);letter-spacing:.08em;color:#b6c1c9;padding:0 0 8px}.receipt dl{margin:10px 0 0;display:grid;grid-template-columns:130px minmax(0,1fr);gap:8px;font:10px/1.6 var(--mono);border-top:1px solid var(--edge);padding-top:14px}.receipt dt{color:#7e929f}.receipt dd{margin:0;overflow-wrap:anywhere;color:#c1cad0}.resolution{padding:18px 22px;border:1px solid #765c3d;background:#dfa96a08;margin:10px 0 22px}.resolution[hidden]{display:none}.resolution .eyebrow{color:var(--amber)}.resolution h2{font:27px var(--serif);margin:6px 0}.resolution p{font-size:13px;color:#b9c4cc;white-space:pre-wrap;margin:0}.load-error{margin:0 0 18px;padding:12px;border:1px solid #8c704e;color:#dfbc91;font-size:12px}.load-error[hidden]{display:none}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.no-script{padding:15px 25px;background:#48341f}.source-note{font:9px var(--mono);color:#778d9d;margin-top:12px}footer{font:9px var(--mono);color:#6f8392;display:flex;justify-content:space-between;gap:15px;padding:0 0 23px;letter-spacing:.1em}.corner{display:inline-block;width:7px;height:7px;border-left:1px solid var(--amber);border-top:1px solid var(--amber);margin-right:7px}
+.context strong{text-transform:uppercase}.panel-top .badge{max-width:46%;overflow-wrap:anywhere}.event-time,.resolution h2,.resolution p,.receipt dt{overflow-wrap:anywhere}.evidence-list{max-height:235px;overflow-y:auto;scrollbar-width:thin}.event-rail{position:relative}.scene-head>.eyebrow{min-width:0}
+.decision-panel{margin:0 0 18px;border:1px solid #70583e;padding:12px;min-width:0}.decision-panel[hidden]{display:none}.decision-panel>summary{color:var(--amber);font-size:10px;letter-spacing:.02em;padding:0;overflow-wrap:anywhere}.decision-body{max-height:280px;max-height:min(280px,45vh);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;margin-top:12px;padding-right:6px;font-size:12px;overflow-wrap:anywhere}.decision-body h3{font:10px var(--mono);color:var(--amber);margin:15px 0 5px}.decision-body p{margin:0 0 8px;white-space:pre-wrap}.decision-body ul{margin:0;padding-left:18px}.decision-body li{margin-bottom:8px;white-space:pre-wrap}.decision-note{color:var(--muted);font-size:11px}
+@media(min-width:1450px){.scene{min-height:465px}.evidence-panel{padding:28px 33px}.event-title{font-size:37px}.event-summary{font-size:14px}.evidence-card{min-height:87px}}
+@media(max-width:900px){.shell{padding:0 22px}.masthead{height:69px}.intro{padding:27px 0 23px}.intro h1{font-size:51px}.context{max-width:200px}.workspace{grid-template-columns:minmax(0,1.15fr) minmax(290px,1fr)}.evidence-panel{padding:19px 19px}.scene-head{padding:13px 15px;flex-wrap:wrap;gap:8px}.scene{min-height:410px}.scene-label{left:15px}.scene-note{left:15px;right:15px}.scene-note span:last-child{display:none}.event-title{font-size:28px}.scene-foot{padding:12px 15px;flex-wrap:wrap;gap:3px}.evidence-list{gap:7px}.bottom{gap:24px}}
+@media(max-width:670px){.shell{padding:0 17px}.masthead{height:63px}.brand{font-size:10px;gap:10px}.mast-right{gap:8px}.mast-right .micro{display:none}.intro{display:block;padding:25px 0 21px}.intro h1{font-size:49px}.intro p{font-size:12px;max-width:440px}.context{text-align:left;margin-top:16px;max-width:none;font-size:10px}.context strong{display:inline;margin-right:7px}.context span{display:inline}.workspace{display:flex;flex-direction:column}.scene-column{border-right:0;border-bottom:1px solid var(--edge)}.scene-head{padding:11px 15px;min-height:49px;flex-wrap:nowrap}.scene{min-height:315px;flex:none}.scene-label p{font-size:20px}.scene-foot{padding:11px 15px;flex-wrap:nowrap}.evidence-panel{padding:20px}.panel-top{margin-bottom:15px}.event-title{font-size:31px}.event-summary{max-height:200px}.event-time{margin:12px 0 19px}.evidence-card{min-height:75px}.evidence-detail{margin-top:4px}.evidence-detail p{max-height:160px;font-size:12px}.transport{padding-top:18px}.transport-top{gap:8px}.play-status{display:none}.controls button{min-width:39px;height:41px}.progress-label{font-size:9px}.event-rail li{flex-basis:150px}.bottom{grid-template-columns:1fr;gap:21px}.receipt dl{grid-template-columns:112px minmax(0,1fr)}footer{font-size:8px}.scene-note span{font-size:8px}.intro .eyebrow{font-size:9px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#event-panel">Skip to recorded event</a>
+<noscript><p class="no-script">JavaScript is needed to read the captured replay. This is a fictional case presentation, not a live agent session.</p></noscript>
+<div class="shell">
+<header class="masthead"><div class="brand"><span class="mark" aria-hidden="true"><i></i><i></i></span>THE CASE ROOM</div><div class="mast-right"><span class="micro" id="recorded-label">Recorded investigation</span><span class="badge">Fictional</span></div></header>
+<main>
+<section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">An investigation, reconstructed.</p><h1 id="page-title">The <em>Night Shift</em></h1><p id="case-subtitle">Move through the captured events. Open the evidence. Follow the reasoning as it unfolded.</p></div><div class="context"><strong>Recorded export</strong><span>Fresh reasoning happens in Hyperagent.<br>This view only replays the export; no model calls are made here.</span></div></section>
+<div id="load-error" class="load-error" role="alert" hidden></div>
+<section class="workspace" aria-label="Recorded case reconstruction">
+<div class="scene-column">
+<div class="scene-head"><span class="eyebrow"><span class="corner" aria-hidden="true"></span>Room reconstruction</span><div class="scene-tools"><button id="reset-camera" aria-label="Reset room camera" disabled>Reset view</button><button id="toggle-view" aria-pressed="false" disabled>2D view</button></div></div>
+<div class="scene" id="scene" role="img" aria-label="A fictional night-shift investigation room: a wood desk, case dossier, evidence board, warm task lamp and cool window light. The readable captured evidence is in the adjacent panel.">
+<div class="fallback" id="fallback"><div class="plan" aria-hidden="true"><div class="board"><i></i><i></i><i></i></div><div class="desk"><div class="folder"></div><div class="lamp"></div></div><div class="chair"></div></div></div>
+<div class="scene-vignette"></div><div class="scene-label"><div class="micro">After hours / case archive</div><p>Every detail leaves a trace.</p></div><div class="scene-note"><span id="view-status">2D room study · loading 3D</span><span>Illustrative scene / recorded evidence</span></div>
+</div>
+<div class="scene-foot"><span><strong id="room-caption">The archive is ready.</strong></span><span>Evidence opens in the reading panel ↗</span></div>
+</div>
+<section class="evidence-panel" id="event-panel" aria-labelledby="event-title" tabindex="-1">
+<div class="panel-top"><span class="eyebrow" id="event-label">Captured event</span><span class="badge" id="event-type">Archive</span></div>
+<h2 class="event-title" id="event-title">Waiting for a captured run</h2><p class="event-summary" id="event-summary" tabindex="0" aria-label="Captured event summary">This replay displays only events and evidence supplied by the exported run.</p><p class="event-time" id="event-time">No event selected</p>
+<details class="decision-panel" id="decision-panel" hidden><summary>External hypothesis — not validated fact</summary><div class="decision-body" id="decision-body" tabindex="0" aria-label="Captured external opinion and citations"></div></details>
+<div class="evidence-heading"><h3>Available evidence</h3><span id="evidence-count">0 items</span></div><div class="evidence-list" id="evidence-list"><p class="empty-evidence">No evidence has been exposed yet.</p></div>
+<div class="evidence-detail" id="evidence-detail"><h4 id="detail-title">Inspect a piece of evidence</h4><p id="detail-summary" tabindex="0" aria-label="Selected evidence summary">Select an available evidence card to read its captured summary.</p></div>
+</section>
+</section>
+<section class="transport" aria-label="Replay timeline">
+<div class="transport-top"><div class="controls"><button id="previous" aria-label="Previous captured event" disabled>←</button><button id="play" class="play" aria-label="Play captured events" disabled><span class="play-icon" aria-hidden="true">▶</span><span id="play-label">Play</span></button><button id="next" aria-label="Next captured event" disabled>→</button><span class="play-status" id="play-status">Manual replay</span></div><div class="progress-label"><strong id="position-label">0 / 0</strong> captured events</div></div>
+<div class="progress"><label for="scrubber" class="sr-only">Select captured event</label><input id="scrubber" type="range" min="0" max="0" value="0" disabled><span>EVENT INDEX</span></div>
+<ol class="event-rail" id="event-rail" aria-label="Choose a captured event"></ol>
+</section>
+<section class="resolution" id="resolution" hidden><span class="eyebrow">Captured resolution</span><h2 id="resolution-title"></h2><p id="resolution-summary"></p></section>
+<div class="bottom"><div><p class="disclaimer"><strong>Fictional case. Real captured sequence.</strong> <span id="disclaimer">An illustrative demonstration, not medical advice or evidence of blind diagnostic performance. This is a recorded replay, not an interactive diagnostic service.</span></p><p class="source-note">Playback advances the archive. It does not execute the agent.</p></div><details class="receipt"><summary>RUN RECEIPT / inspect provenance</summary><dl id="receipt-fields"></dl></details></div>
+</main><footer><span>THE CASE ROOM</span><span>A RECORDED RECONSTRUCTION</span></footer>
+</div>
+<p class="sr-only" id="announcement" aria-live="polite" aria-atomic="true"></p>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
+<script>
+'use strict';
+const RUN = __CASE_ROOM_DATA__;
+// Exporter replaces the one raw-data sentinel above. Escape <, U+2028 and U+2029 in JSON.
+(function () {
+  const $ = id => document.getElementById(id);
+  const text = value => typeof value === 'string' ? value : value == null ? '' : String(value);
+  const record = value => value && typeof value === 'object' && !Array.isArray(value);
+  const run = record(RUN) ? RUN : {};
+  const events = Array.isArray(run.events) ? run.events.filter(record) : [];
+  const evidence = Array.isArray(run.evidence) ? run.evidence.filter(record) : [];
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let index = 0, selectedEvidence = null, playing = false, timer = null, sceneAPI = null;
+  const exposure = new Map();
+  // An explicit evidence reference is the sole early-exposure authority. Ambiguous stages
+  // (often names rather than sequence numbers) stay hidden until the final frame.
+  events.forEach((event, i) => {
+    (Array.isArray(event.evidenceIds) ? event.evidenceIds : []).forEach(id => {
+      const key = text(id); if (!exposure.has(key)) exposure.set(key, i);
+    });
+  });
+  const safeTitle = (event, i) => text(event.title) || 'Captured event ' + (i + 1);
+  function visibleEvidence() {
+    if (!events.length) return [];
+    return evidence.filter(item => exposure.has(text(item.id)) ? exposure.get(text(item.id)) <= index : index === events.length - 1);
+  }
+  function addReceipt(key, value) {
+    if (value === undefined || value === null || value === '') return;
+    const dt = document.createElement('dt'), dd = document.createElement('dd');
+    dt.textContent = key;
+    dd.textContent = record(value) || Array.isArray(value) ? JSON.stringify(value) : text(value);
+    $('receipt-fields').append(dt, dd);
+  }
+  addReceipt('Run ID', run.runId); addReceipt('Case ID', record(run.case) ? run.case.id : null);
+  addReceipt('Schema', run.schemaVersion); addReceipt('Mode', run.mode); addReceipt('Status', run.status);
+  addReceipt('Events', events.length);
+  // Attribution comes only from explicit export metadata, never the case or engine name.
+  if (record(run.provenance)) {
+    const actorLabel = [run.provenance.actorLabel, run.provenance.actor].find(value => typeof value === 'string' && value.trim());
+    if (actorLabel) $('recorded-label').textContent = 'Recorded investigation · ' + actorLabel;
+    addReceipt('Provenance', run.provenance);
+  }
+  if (record(run.receipts)) Object.entries(run.receipts).forEach(([key, value]) => addReceipt(key, value));
+  if (record(run.case)) {
+    if (run.case.subtitle) $('case-subtitle').textContent = text(run.case.subtitle);
+    if (run.case.disclaimer) $('disclaimer').append(document.createTextNode(' ' + text(run.case.disclaimer)));
+    if (run.case.title) { addReceipt('Case title', run.case.title); document.title = 'The Night Shift — ' + text(run.case.title); }
+  }
+  if (!events.length) {
+    $('load-error').hidden = false;
+    $('load-error').textContent = 'This bundle contains no captured events. The room is illustrative; no execution or evidence is being inferred.';
+  }
+  const railButtons = events.map((event, i) => {
+    const li = document.createElement('li'), button = document.createElement('button');
+    const seq = document.createElement('span'), title = document.createElement('span');
+    seq.className = 'seq'; seq.textContent = String(i + 1).padStart(2, '0') + ' / ' + (text(event.type) || 'EVENT');
+    title.className = 'rail-title'; title.textContent = safeTitle(event, i);
+    button.append(seq, title); button.setAttribute('aria-label', 'Event ' + (i + 1) + ': ' + safeTitle(event, i));
+    button.addEventListener('click', () => { pause(); select(i, true); }); li.append(button); $('event-rail').append(li); return button;
+  });
+  function inspect(item, announce) {
+    selectedEvidence = item ? text(item.id) : null;
+    $('detail-title').textContent = item ? text(item.title) || 'Untitled evidence' : 'Inspect a piece of evidence';
+    $('detail-summary').textContent = item ? text(item.summary) || 'No summary was included in the captured bundle.' : 'Select an available evidence card to read its captured summary.';
+    document.querySelectorAll('.evidence-card').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.evidenceId === selectedEvidence)));
+    if (announce && item) $('announcement').textContent = 'Evidence selected: ' + (text(item.title) || 'Untitled evidence') + '. ' + text(item.summary);
+  }
+  function renderEvidence() {
+    const visible = visibleEvidence(); $('evidence-list').replaceChildren();
+    $('evidence-count').textContent = visible.length + (visible.length === 1 ? ' item' : ' items');
+    if (!visible.length) { const p = document.createElement('p'); p.className = 'empty-evidence'; p.textContent = 'No evidence has been exposed at this point in the recording.'; $('evidence-list').append(p); }
+    visible.forEach(item => {
+      const button = document.createElement('button'), kind = document.createElement('span'), title = document.createElement('strong');
+      button.className = 'evidence-card'; button.dataset.evidenceId = text(item.id); button.setAttribute('aria-controls', 'evidence-detail');
+      kind.className = 'micro'; kind.textContent = text(item.kind) || 'Evidence'; title.textContent = text(item.title) || 'Untitled evidence';
+      button.append(kind, title); button.addEventListener('click', () => inspect(item, true)); $('evidence-list').append(button);
+    });
+    const focusItem = visible.find(item => text(item.id) === selectedEvidence);
+    const references = Array.isArray(events[index]?.evidenceIds) ? events[index].evidenceIds.map(text) : [];
+    inspect(focusItem || visible.find(item => references.includes(text(item.id))) || visible[0] || null, false);
+    return visible.length;
+  }
+  function renderDecision(event) {
+    const panel = $('decision-panel'), body = $('decision-body');
+    // Clear previous opinions even when the next event has no decision payload.
+    panel.hidden = true; panel.open = false; body.replaceChildren(); body.scrollTop = 0;
+    const data = record(event.data) ? event.data : {};
+    if (!record(data.decision)) return;
+    const decision = data.decision;
+    const paragraph = (value, className) => {
+      const p = document.createElement('p'); p.textContent = value;
+      if (className) p.className = className;
+      body.append(p);
+    };
+    const heading = value => { const h = document.createElement('h3'); h.textContent = value; body.append(h); };
+    paragraph('Captured external opinion. Protocol acceptance checks the submission, not whether its hypothesis or reasoning is true.', 'decision-note');
+    if (typeof data.source === 'string' && data.source) paragraph('Recorded source: ' + data.source, 'decision-note');
+    heading('Hypothesis'); paragraph(text(decision.hypothesis) || 'No hypothesis was included.');
+    heading('Perspectives');
+    const perspectives = Array.isArray(decision.perspectives) ? decision.perspectives.filter(record) : [];
+    if (perspectives.length) {
+      const list = document.createElement('ul');
+      perspectives.forEach(perspective => {
+        const item = document.createElement('li');
+        item.textContent = (text(perspective.role) || 'Unspecified role') + ': ' + (text(perspective.position) || 'No position was included.');
+        list.append(item);
+      });
+      body.append(list);
+    } else paragraph('No perspectives were included.');
+    heading('Rationale'); paragraph(text(decision.rationale) || 'No rationale was included.');
+    heading('Cited evidence');
+    const citations = Array.isArray(decision.evidenceIds) ? decision.evidenceIds : [];
+    const visible = visibleEvidence();
+    if (citations.length) {
+      const list = document.createElement('ul');
+      citations.forEach(id => {
+        const item = document.createElement('li'), evidenceId = text(id);
+        const cited = visible.find(candidate => text(candidate.id) === evidenceId);
+        item.textContent = evidenceId + (cited ? ' — ' + (text(cited.title) || 'Untitled evidence') : ' — not available in this frame');
+        list.append(item);
+      });
+      body.append(list);
+    } else paragraph('No evidence citations were included.');
+    paragraph('Citations record what was referenced; they do not validate the opinion.', 'decision-note');
+    panel.hidden = false;
+  }
+  function select(nextIndex, userAction) {
+    if (!events.length) return;
+    index = Math.max(0, Math.min(events.length - 1, nextIndex)); const event = events[index];
+    $('event-label').textContent = 'Captured event / ' + String(index + 1).padStart(2, '0');
+    $('event-type').textContent = text(event.type) || 'Event';
+    $('event-title').textContent = safeTitle(event, index); $('event-summary').textContent = text(event.summary) || 'No summary was included for this event.';
+    const meta = [];
+    if (event.seq !== undefined) meta.push('SEQ ' + text(event.seq)); if (event.at) meta.push(text(event.at));
+    $('event-time').textContent = meta.join(' · ') || 'No timestamp provided';
+    $('position-label').textContent = (index + 1) + ' / ' + events.length;
+    $('scrubber').value = index; $('scrubber').setAttribute('aria-valuetext', 'Event ' + (index + 1) + ' of ' + events.length + ': ' + safeTitle(event, index));
+    $('previous').disabled = index === 0; $('next').disabled = index === events.length - 1;
+    railButtons.forEach((button, i) => { if (i === index) button.setAttribute('aria-current', 'step'); else button.removeAttribute('aria-current'); });
+    // Scroll only the rail; do not yank the reading panel or document during playback.
+    const active = railButtons[index], rail = $('event-rail');
+    if (active && (active.offsetLeft < rail.scrollLeft || active.offsetLeft + active.offsetWidth > rail.scrollLeft + rail.clientWidth)) {
+      rail.scrollTo({left: active.offsetLeft - 12, behavior: 'auto'});
+    }
+    renderDecision(event);
+    const visibleCount = renderEvidence();
+    $('room-caption').textContent = visibleCount ? visibleCount + (visibleCount === 1 ? ' evidence item available.' : ' evidence items available.') : 'No evidence exposed yet.';
+    const showResolution = index === events.length - 1 && record(run.resolution);
+    $('resolution').hidden = !showResolution;
+    // Remove later-frame contents as well as hiding them when rewinding.
+    $('resolution-title').textContent = showResolution ? text(run.resolution.title) || 'Recorded resolution' : '';
+    $('resolution-summary').textContent = showResolution ? text(run.resolution.summary) : '';
+    if (sceneAPI) sceneAPI.frame(index, events.length, visibleCount, userAction);
+    if (userAction) $('announcement').textContent = 'Event ' + (index + 1) + ' of ' + events.length + ': ' + safeTitle(event, index);
+  }
+  function pause() {
+    playing = false; clearTimeout(timer); timer = null; $('play-label').textContent = 'Play';
+    $('play').setAttribute('aria-label', 'Play captured events'); $('play').querySelector('.play-icon').textContent = '▶'; $('play-status').textContent = 'Manual replay';
+  }
+  function tick() {
+    if (!playing) return;
+    timer = setTimeout(() => { if (!playing) return; if (index < events.length - 1) select(index + 1, true); if (index >= events.length - 1) pause(); else tick(); }, 4200);
+  }
+  $('play').addEventListener('click', () => {
+    if (playing) return pause();
+    if (index === events.length - 1) select(0, true);
+    playing = true; $('play-label').textContent = 'Pause'; $('play').setAttribute('aria-label', 'Pause captured events');
+    $('play').querySelector('.play-icon').textContent = 'Ⅱ'; $('play-status').textContent = 'Recorded playback · 4.2s / event'; tick();
+  });
+  $('previous').addEventListener('click', () => { pause(); select(index - 1, true); });
+  $('next').addEventListener('click', () => { pause(); select(index + 1, true); });
+  $('scrubber').addEventListener('input', event => { pause(); select(Number(event.target.value), true); });
+  window.addEventListener('keydown', event => {
+    const target = event.target;
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || target.closest('input,textarea,select,[contenteditable="true"],[role="textbox"]')) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); pause(); select(index + (event.key === 'ArrowRight' ? 1 : -1), true); }
+  });
+  document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
+  if (events.length) { $('scrubber').disabled = false; $('scrubber').max = events.length - 1; $('play').disabled = events.length < 2; select(0, false); }
+
+  // A real, geometric Three.js room. It is intentionally not a visual execution monitor.
+  // No continuous animation loop: render on resize, view changes, or short camera transitions.
+  function initRoom() {
+    const host = $('scene'); let renderer;
+    function fallback(message) {
+      if (renderer) { renderer.domElement.remove(); renderer.dispose(); }
+      $('fallback').hidden = false; $('view-status').textContent = message;
+      $('reset-camera').disabled = true; $('toggle-view').disabled = true;
+    }
+    if (!window.THREE) { fallback('2D room study · 3D unavailable'); return; }
+    try {
+      const T = window.THREE;
+      renderer = new T.WebGLRenderer({antialias:true,alpha:false,powerPreference:'low-power'});
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.6)); renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = T.PCFSoftShadowMap; renderer.outputColorSpace = T.SRGBColorSpace;
+      renderer.toneMapping = T.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.3;
+      renderer.domElement.setAttribute('aria-hidden','true'); host.prepend(renderer.domElement);
+      const scene = new T.Scene(); scene.background = new T.Color('#101a25'); scene.fog = new T.Fog('#101a25',14,30);
+      const camera = new T.PerspectiveCamera(40,1,.1,60);
+      const home = new T.Vector3(9.6,8.5,12.8), look = new T.Vector3(0,1.8,-.45); camera.position.copy(home); camera.lookAt(look);
+      const mat = (color, roughness=.82, metalness=0) => new T.MeshStandardMaterial({color,roughness,metalness});
+      const wall = mat('#23313d'), trim = mat('#17232e'), floor = mat('#34404a'), wood = mat('#594535'), darkWood = mat('#332c25');
+      const brass = mat('#8d7552',.35,.6), steel = mat('#202a30',.42,.45), paper = mat('#d0c5ad'), ink = mat('#526778');
+      function box(w,h,d, material, x,y,z, parent=scene) { const m = new T.Mesh(new T.BoxGeometry(w,h,d),material);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m; }
+      function cyl(r1,r2,h, material,x,y,z,parent=scene) {const m=new T.Mesh(new T.CylinderGeometry(r1,r2,h,24),material);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m;}
+      function line(a,b,r,material,parent=scene) {const va=new T.Vector3(...a),vb=new T.Vector3(...b),delta=vb.clone().sub(va);const m=cyl(r,r,delta.length(),material,0,0,0,parent);m.position.copy(va.add(vb).multiplyScalar(.5));m.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),delta.normalize());return m;}
+      // Open-front architectural set, with deliberate negative space above the desk.
+      box(12,.24,9,floor,0,-.12,0);box(12,5.9,.19,wall,0,2.9,-4.5);box(.18,5.9,9,wall,-6,2.9,0);
+      box(12,.12,.12,trim,0,.1,-4.36);box(.12,.12,9,trim,-5.86,.1,0);
+      for(let i=0;i<11;i++)box(.014,.006,9,mat('#212d37'),-5.3+i*1.04,.008,0);
+      // Cool window, mullions, sill and blind slats. Emissive glazing gives depth, not neon.
+      const glass=new T.MeshStandardMaterial({color:'#698394',emissive:'#718e9e',emissiveIntensity:.3,roughness:.5});
+      box(3.1,3.35,.13,trim,-3.75,3.18,-4.3);box(2.85,3.05,.035,glass,-3.75,3.18,-4.2);
+      box(.075,3.1,.08,trim,-3.75,3.18,-4.11);box(2.85,.065,.08,trim,-3.75,3.15,-4.11);
+      box(3.35,.14,.44,mat('#56616a'),-3.75,1.56,-4.1);
+      for(let i=0;i<8;i++)box(2.93,.036,.17,mat('#81919b'),-3.75,4.55-i*.28,-4.03).rotation.x=-.24;
+      // Pinned back-wall timeline: unlabelled scenery, never fabricated evidence text.
+      box(5.4,2.85,.11,brass,1.43,3.56,-4.28);box(5.18,2.63,.05,mat('#354652'),1.43,3.56,-4.19);
+      line([-1.0,3.53,-4.12],[3.7,3.53,-4.12],.012,mat('#ac9270'));
+      const boardCards=[];
+      for(let i=0;i<6;i++){const group=new T.Group();scene.add(group);group.position.set(-.68+i*.84,3.5+(i%2===0?.45:-.54),-4.1);group.rotation.z=(i%2===0?1:-1)*.035;
+        box(.58,.7,.02,paper,0,0,0,group);box(.38,.17,.025,ink,0,.13,.017,group);
+        for(let k=0;k<3;k++)box(.37-k*.035,.011,.027,mat('#9c9d92'),-.01,-.055-k*.065,.018,group);
+        cyl(.025,.025,.03,brass,0,.28,.025,group).rotation.x=Math.PI/2;boardCards.push(group);
+      }
+      // Desk: solid top, inset leather mat, drawer pedestal, tapered-looking steel legs.
+      const desk=new T.Group();scene.add(desk);desk.position.set(.6,0,.55);
+      box(6.15,.23,2.95,wood,0,2.05,0,desk);box(5.87,.11,2.7,darkWood,0,1.91,0,desk);
+      box(1.25,1.66,2.45,darkWood,2.18,.98,-.08,desk);
+      for(let i=0;i<3;i++){box(1.18,.44,.04,wood,2.18,1.47-i*.48,1.168,desk);box(.3,.032,.055,brass,2.18,1.45-i*.48,1.21,desk);}
+      for(const z of [-1.13,1.13]){box(.12,1.93,.12,steel,-2.74,.99,z,desk);box(.45,.06,.38,steel,-2.74,.05,z,desk);}
+      box(3.57,.022,1.89,mat('#263636'),-.29,2.178,.18,desk);
+      // Open dossier with deliberately abstract marks, actual text stays in accessible UI.
+      const dossier=new T.Group();desk.add(dossier);dossier.position.set(-.3,2.22,.35);dossier.rotation.y=.13;
+      box(1.67,.036,1.28,mat('#a88d63'),0,0,0,dossier);box(.74,.043,1.12,paper,-.405,.025,0,dossier);box(.74,.043,1.12,paper,.405,.025,0,dossier);
+      box(.44,.008,.06,ink,-.44,.052,-.39,dossier);
+      for(let i=0;i<8;i++)box(.51-(i%3)*.05,.006,.018,mat('#9b9c92'),-.405,.053,-.24+i*.082,dossier);
+      box(.51,.008,.32,mat('#7e8c8e'),.405,.053,-.24,dossier);
+      for(let i=0;i<4;i++)box(.49,.006,.018,mat('#9b9c92'),.405,.053,.05+i*.087,dossier);
+      // Envelope and paper stack, a black pencil and a ceramic cup.
+      const stack=new T.Group();desk.add(stack);stack.position.set(-2.08,2.23,-.48);stack.rotation.y=-.19;
+      for(let i=0;i<4;i++)box(.85,.026,1.17,paper,i*.009,i*.028,0,stack);
+      box(.66,.012,.044,ink,0,.115,-.33,stack);box(.13,.014,.13,mat('#9b6353'),.22,.115,.25,stack);
+      line([.82,2.23,.6],[.97,2.23,-.23],.022,mat('#a0814d'),desk);
+      cyl(.19,.16,.35,mat('#b4b8ae'),1.13,2.36,.82,desk);cyl(.16,.16,.012,mat('#31281f'),1.13,2.54,.82,desk);
+      const handle=new T.Mesh(new T.TorusGeometry(.115,.035,8,20),mat('#b4b8ae'));handle.position.set(1.33,2.39,.82);desk.add(handle);
+      // Task lamp: weighted base, articulated arm, a warm reflector and local pool of light.
+      cyl(.34,.4,.08,steel,2.17,2.23,-.76,desk);line([2.17,2.26,-.76],[2.37,3.28,-.76],.043,brass,desk);
+      line([2.37,3.28,-.76],[1.72,3.78,-.65],.038,brass,desk);cyl(.1,.1,.08,steel,2.37,3.28,-.76,desk).rotation.x=Math.PI/2;
+      const shade=cyl(.16,.4,.34,steel,1.65,3.65,-.64,desk);shade.rotation.z=-.23;
+      const bulb=cyl(.29,.29,.025,new T.MeshStandardMaterial({color:'#f6d49c',emissive:'#ffd49b',emissiveIntensity:1.9}),1.61,3.48,-.64,desk);bulb.rotation.z=-.23;
+      const lamp=new T.SpotLight('#ffd098',35,9,Math.PI/3.1,.68,1.55);lamp.position.set(2.19,3.46,-.09);lamp.target.position.set(.4,2.0,.62);lamp.castShadow=true;lamp.shadow.mapSize.set(1024,1024);lamp.shadow.bias=-.0006;scene.add(lamp,lamp.target);
+      scene.add(new T.HemisphereLight('#b4c6d3','#3f3430',1.5));
+      const moon=new T.DirectionalLight('#b5d7f0',2.2);moon.position.set(-5,7,-1);scene.add(moon);
+      const fill=new T.PointLight('#e2ac70',4,8,2);fill.position.set(2.3,3.25,.2);scene.add(fill);
+      // Chair, archive cabinet, and books lend the room quiet lived-in scale.
+      box(1.47,.2,1.15,mat('#283b46'),.1,1.14,2.76);box(1.47,1.21,.2,mat('#314750'),.1,1.85,3.31).rotation.x=-.1;
+      for(const x of [-.5,.7])for(const z of [2.32,3.18])line([x,1.08,z],[x+ (x<0?-.13:.13),.08,z+.1],.045,steel);
+      box(1.95,1.82,.8,mat('#354551'),-4.59,.93,-2.38);box(2.05,.09,.88,mat('#52616a'),-4.59,1.89,-2.38);
+      for(let i=0;i<3;i++){box(1.77,.49,.035,mat('#40515d'),-4.59,1.5-i*.54,-1.955);box(.32,.05,.055,steel,-4.59,1.5-i*.54,-1.91);}
+      for(let i=0;i<5;i++){const m=box(.13+i%2*.035,.6+i%3*.08,.46,mat(['#927857','#596c70','#928f7e','#394f61','#a28e71'][i]),-5.16+i*.2,2.2+i%3*.04,-2.4);m.rotation.z=i===4?-.13:0;}
+      box(1,.045,.62,mat('#8b7759'),-4.1,1.95,-2.36);
+      // Neutral wall clock — decorative, not a claimed runtime timestamp.
+      const clock = cyl(.31,.31,.075,brass,4.65,4.75,-4.22);clock.rotation.x=Math.PI/2;
+      const face = cyl(.275,.275,.085,paper,4.65,4.75,-4.20);face.rotation.x=Math.PI/2;
+      line([4.65,4.75,-4.145],[4.50,4.82,-4.145],.012,steel);line([4.65,4.75,-4.145],[4.68,4.96,-4.145],.009,steel);
+      let flat=false,animation=0,lost=false;const target=home.clone();
+      function render(){if(!flat&&!lost)renderer.render(scene,camera);}
+      function resize(){const rect=host.getBoundingClientRect();if(!rect.width||!rect.height)return;renderer.setSize(rect.width,rect.height,false);camera.aspect=rect.width/rect.height;camera.fov=camera.aspect<1.1?49:40;camera.updateProjectionMatrix();render();}
+      function move(destination,animate){cancelAnimationFrame(animation);target.copy(destination);if(reduced.matches||!animate){camera.position.copy(target);camera.lookAt(look);render();return;}const start=camera.position.clone(),began=performance.now();function step(now){const t=Math.min(1,(now-began)/620),ease=1-Math.pow(1-t,3);camera.position.lerpVectors(start,target,ease);camera.lookAt(look);render();if(t<1)animation=requestAnimationFrame(step);}animation=requestAnimationFrame(step);}
+      sceneAPI={frame(i,total,count,animate){const progress=total>1?i/(total-1):0;boardCards.forEach((card,k)=>{card.visible=k<Math.min(6,count);});move(new T.Vector3(home.x-progress*.65,home.y-progress*.45,home.z-progress*.5),animate&&!flat);}};
+      $('reset-camera').disabled=false;$('toggle-view').disabled=false;
+      $('reset-camera').addEventListener('click',()=>move(home,true));
+      $('toggle-view').addEventListener('click',()=>{flat=!flat;cancelAnimationFrame(animation);renderer.domElement.hidden=flat;renderer.domElement.style.display=flat?'none':'block';$('fallback').hidden=!flat;$('toggle-view').textContent=flat?'3D view':'2D view';$('toggle-view').setAttribute('aria-pressed',String(flat));$('reset-camera').disabled=flat;$('view-status').textContent=flat?'2D room study':'3D room study · Three.js';if(!flat)resize();});
+      renderer.domElement.addEventListener('webglcontextlost',event=>{event.preventDefault();lost=true;cancelAnimationFrame(animation);sceneAPI=null;fallback('2D room study · graphics context unavailable');});
+      $('fallback').hidden=true;$('view-status').textContent='3D room study · Three.js';
+      if(typeof ResizeObserver!=='undefined'){const observer=new ResizeObserver(resize);observer.observe(host);}else window.addEventListener('resize',resize);
+      reduced.addEventListener?.('change',()=>{cancelAnimationFrame(animation);camera.position.copy(target);camera.lookAt(look);render();});
+      resize();sceneAPI.frame(index,events.length,visibleEvidence().length,false);
+      window.addEventListener('pagehide',()=>{pause();cancelAnimationFrame(animation);},{once:true});
+    } catch(error) { console.warn('Case Room 3D fallback:',error); sceneAPI=null; fallback('2D room study · 3D unavailable'); }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initRoom,{once:true});else initRoom();
+})();
+</script>
+</body>
+</html>

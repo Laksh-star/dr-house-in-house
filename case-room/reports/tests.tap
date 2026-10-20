@@ -1,0 +1,60 @@
+TAP version 13
+# (node:4364) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: fresh-process start, suspend, resume, duplicate receipts, persisted completion and public export
+ok 1 - fresh-process start, suspend, resume, duplicate receipts, persisted completion and public export
+  ---
+  duration_ms: 24942.244085
+  type: 'test'
+  ...
+# Subtest: invalid citations, locked/repeated inspections, stale versions, premature resolve, strict malformed input remain suspended
+ok 2 - invalid citations, locked/repeated inspections, stale versions, premature resolve, strict malformed input remain suspended
+  ---
+  duration_ms: 31574.77224
+  type: 'test'
+  ...
+# Subtest: five-decision hard bound chooses exhausted branch; completed export withholds hidden truth
+ok 3 - five-decision hard bound chooses exhausted branch; completed export withholds hidden truth
+  ---
+  duration_ms: 17039.057954
+  type: 'test'
+  ...
+# Subtest: restart of the same suspended execute is idempotent after ledger commit / snapshot gap
+ok 4 - restart of the same suspended execute is idempotent after ledger commit / snapshot gap
+  ---
+  duration_ms: 6555.202141
+  type: 'test'
+  ...
+# Subtest: snapshot/ledger gap blocks pending and new decisions before resume; exact original retry still heals
+ok 5 - snapshot/ledger gap blocks pending and new decisions before resume; exact original retry still heals
+  ---
+  duration_ms: 13416.744614
+  type: 'test'
+  ...
+# Subtest: pure evaluation reports protocol stats, not a clinical or model score
+ok 6 - pure evaluation reports protocol stats, not a clinical or model score
+  ---
+  duration_ms: 0.986218
+  type: 'test'
+  ...
+# Subtest: replay embedding escapes script terminators and preserves replacement metacharacters
+ok 7 - replay embedding escapes script terminators and preserves replacement metacharacters
+  ---
+  duration_ms: 33.134712
+  type: 'test'
+  ...
+# Subtest: replay renderer rejects unrecognized bundles and refuses to overwrite output
+ok 8 - replay renderer rejects unrecognized bundles and refuses to overwrite output
+  ---
+  duration_ms: 68.956446
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 93989.311681

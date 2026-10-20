@@ -1,0 +1,9 @@
+{
+  "runId":"astra-nightshift-20260909",
+  "bundle":"night-shift.json",
+  "method":"Hyperagent browser tools against the actual published replay, plus render health check",
+  "renderHealth":{"version":1,"status":"healthy","consoleErrors":0,"failedRequests":0},
+  "desktop":{"webglCanvasPresent":true,"viewStatus":"3D room study · Three.js","initialPosition":"1 / 12","decisionDisclosure":{"testedAt":"2 / 12","showsCapturedHypothesis":true,"showsFivePerspectives":true,"labelsOpinionNotFact":true},"finalPosition":"12 / 12","resolutionVisible":true,"visibleEvidenceCount":5},
+  "mobile":{"viewportWidth":390,"documentScrollWidth":375,"horizontalOverflow":false,"webglCanvasPresent":true,"initialPosition":"1 / 12","decisionPanelVisibleAtSecondEvent":true},
+  "interactionNotes":["Next-event and external-hypothesis disclosure verified via browser clicks.","Browser automation's End-key slider attempts did not advance; setting the native range and dispatching its input event verified final-state rendering.","Desktop screenshot visually inspected by the assistant.","Replay is recorded, not a live model UI; attribution is operator-supplied.","Synthetic malicious-data and fallback UI tests were performed separately during template development, not on the live bundle."]
+}

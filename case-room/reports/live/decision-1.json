@@ -1,0 +1,16 @@
+{
+  "decisionVersion": 1,
+  "idempotencyKey": "astra-nightshift-turn-1",
+  "action": "inspect",
+  "targetEvidenceId": "room-timeline",
+  "hypothesis": "The shared setting is a useful lead, but fatigue, food, and air remain unresolved.",
+  "evidenceIds": ["opening"],
+  "perspectives": [
+    {"role":"Pattern Finder","position":"Three accounts on one shift suggest looking for a shared exposure or shared schedule; this alone does not identify a cause."},
+    {"role":"Skeptic","position":"A cluster is not proof of an environmental cause. The story may be explained by food or fatigue."},
+    {"role":"Evidence Analyst","position":"Compare symptom timing with room occupancy before selecting a mechanism."},
+    {"role":"Alternatives Explorer","position":"Keep meal history and shift duration available as competing explanations."},
+    {"role":"Moderator","position":"Inspect the room timeline first because it may separate place-linked from general shift-linked patterns."}
+  ],
+  "rationale": "The opening contains only a simultaneous cluster, not a verified cause. A room-by-room chronology is a discriminating next observation. I am requesting the predefined timeline and not assuming its contents. These are perspectives from one Astra session; the builder already knows the authored premise, so this is an execution demonstration rather than a blinded test."
+}

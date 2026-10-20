@@ -1,4 +1,40 @@
-# 🏥 Dr. House Multi-Agent Diagnostic System
+# The Case Room — Astra × Mastra workflow showcase
+
+## New here? Start with the experience, not the code
+
+**[Read the spoiler-free User Guide →](case-room/USER-GUIDE.md)**
+
+- **Watch:** the published 3D page replays recorded events. Play does not call Astra or start Mastra.
+- **Participate live:** ask the assistant in the Hyperagent project conversation to start a fresh run and pause after each clue. The assistant runs the workflow; you choose in ordinary language.
+- **Expect:** one fictional case, not a live public diagnostic app. The page and conversation are not automatically synchronized.
+
+You do not need terminal commands to participate in a guided Hyperagent session. The setup instructions below are for developers.
+
+---
+
+The new **[Case Room package](case-room/README.md)** implements a fictional investigation using Mastra **1.64.0**, typed external decisions, durable suspend/resume, and a Three.js replay. Astra reasons through the existing Hyperagent session; **no separate model API key is required for this new execution path**.
+
+- [Setup, CLI, persistence, and limitations](case-room/README.md)
+- [Recorded investigation and decision inputs](case-room/reports/live/)
+- [Integration test report](case-room/reports/tests.tap)
+- [Replay template and rendering instructions](case-room/replay/README.md)
+
+```bash
+cd case-room
+npm ci
+npm run typecheck
+npm run build
+npm test
+npm run cli -- start --case night-shift
+```
+
+This is a **fictional engineering showcase**, not medical advice, clinical training validation, or a blinded reasoning benchmark. The 3D page replays recorded events; it does not make live model calls. Use the case-room package scripts, not the legacy root scripts, for the new system.
+
+The original project is preserved below for historical reference. Its model-key requirements and diagnostic claims do **not** describe the new Case Room execution path. The new package is isolated to avoid silently breaking the old demo; a full root-package consolidation is not included in this first milestone.
+
+---
+
+# Legacy: Dr. House Multi-Agent Diagnostic System
 
 A multi-agent system built with Mastra.ai that simulates the diagnostic process from the TV series "House M.D." Each agent embodies the personality and medical expertise of the show's characters, working together to solve complex medical cases.
 

@@ -1,0 +1,485 @@
+{
+  "schemaVersion": "1.0",
+  "mode": "recorded-replay",
+  "runId": "astra-nightshift-20260909",
+  "case": {
+    "id": "night-shift",
+    "title": "The Night Shift",
+    "subtitle": "An authored fictional archive mystery: fatigue, food, or air?",
+    "disclaimer": "Fictional investigation exercise only. Not a real medical case, diagnosis, clinical evaluation, or treatment advice. The builder knows the fixed answer; this is not a blinded reasoning benchmark."
+  },
+  "status": "resolved",
+  "events": [
+    {
+      "id": "astra-nightshift-20260909:1",
+      "seq": 1,
+      "type": "case_started",
+      "at": "2026-09-09T01:47:21.386Z",
+      "title": "The Night Shift",
+      "summary": "In this fictional story, archivists Mara, Leon, and Priya report headache and nausea during the same overnight cataloguing shift. The opening possibilities are fatigue, food, and something about the archive air. No cause has been established.",
+      "evidenceIds": [
+        "opening"
+      ],
+      "data": {
+        "mode": "external-decision",
+        "modelApiCalls": 0
+      }
+    },
+    {
+      "id": "astra-nightshift-20260909:2",
+      "seq": 2,
+      "type": "decision_accepted",
+      "at": "2026-09-09T01:54:12.367Z",
+      "title": "Inspection decision accepted",
+      "summary": "The opening contains only a simultaneous cluster, not a verified cause. A room-by-room chronology is a discriminating next observation. I am requesting the predefined timeline and not assuming its contents. These are perspectives from one Astra session; the builder already knows the authored premise, so this is an execution demonstration rather than a blinded test.",
+      "evidenceIds": [
+        "opening"
+      ],
+      "data": {
+        "decision": {
+          "decisionVersion": 1,
+          "idempotencyKey": "astra-nightshift-turn-1",
+          "action": "inspect",
+          "targetEvidenceId": "room-timeline",
+          "hypothesis": "The shared setting is a useful lead, but fatigue, food, and air remain unresolved.",
+          "evidenceIds": [
+            "opening"
+          ],
+          "perspectives": [
+            {
+              "role": "Pattern Finder",
+              "position": "Three accounts on one shift suggest looking for a shared exposure or shared schedule; this alone does not identify a cause."
+            },
+            {
+              "role": "Skeptic",
+              "position": "A cluster is not proof of an environmental cause. The story may be explained by food or fatigue."
+            },
+            {
+              "role": "Evidence Analyst",
+              "position": "Compare symptom timing with room occupancy before selecting a mechanism."
+            },
+            {
+              "role": "Alternatives Explorer",
+              "position": "Keep meal history and shift duration available as competing explanations."
+            },
+            {
+              "role": "Moderator",
+              "position": "Inspect the room timeline first because it may separate place-linked from general shift-linked patterns."
+            }
+          ],
+          "rationale": "The opening contains only a simultaneous cluster, not a verified cause. A room-by-room chronology is a discriminating next observation. I am requesting the predefined timeline and not assuming its contents. These are perspectives from one Astra session; the builder already knows the authored premise, so this is an execution demonstration rather than a blinded test."
+        },
+        "source": "external-cli",
+        "unverifiedOpinion": true
+      }
+    },
+    {
+      "id": "astra-nightshift-20260909:3",
+      "seq": 3,
+      "type": "evidence_revealed",
+      "at": "2026-09-09T01:54:12.367Z",
+      "title": "Room-by-room timeline",
+      "summary": "All three accounts describe feeling worse after working in the basement and better while sorting boxes outside. Those changes line up with location rather than a shared meal or length of shift.",
+      "evidenceIds": [
+        "room-timeline"
+      ],
+      "data": {
+        "kind": "timeline",
+        "stage": 1
+      }
+    },
+    {
+      "id": "astra-nightshift-20260909:4",
+      "seq": 4,
+      "type": "decision_accepted",
+      "at": "2026-09-09T01:57:39.183Z",
+      "title": "Inspection decision accepted",
+      "summary": "The revealed room timeline links worsening to the basement and improvement to outside work. I update toward a location-linked hypothesis, but a facilities record is needed before naming a specific source. The target is a request, not a citation to unseen contents.",
+      "evidenceIds": [
+        "opening",
+        "room-timeline"
+      ],
+      "data": {
+        "decision": {
+          "decisionVersion": 2,
+          "idempotencyKey": "astra-nightshift-turn-2",
+          "action": "inspect",
+          "targetEvidenceId": "facilities-log",
+          "hypothesis": "A basement-linked condition now explains the chronology better than general fatigue or a shared meal; the mechanism remains unverified.",
+          "evidenceIds": [
+            "opening",
+            "room-timeline"
+          ],
+          "perspectives": [
+            {
+              "role": "Pattern Finder",
+              "position": "Symptoms vary with location in all three accounts."
+            },
+            {
+              "role": "Skeptic",
+              "position": "Location association does not identify equipment or establish a medical mechanism."
+            },
+            {
+              "role": "Evidence Analyst",
+              "position": "Inspect a dated facilities record for an independent account of basement conditions."
+            },
+            {
+              "role": "Alternatives Explorer",
+              "position": "Food and workload are weakened, not eliminated; preserve a chance to check them."
+            },
+            {
+              "role": "Moderator",
+              "position": "Inspect facilities without adding a cause to the case facts."
+            }
+          ],
+          "rationale": "The revealed room timeline links worsening to the basement and improvement to outside work. I update toward a location-linked hypothesis, but a facilities record is needed before naming a specific source. The target is a request, not a citation to unseen contents."
+        },
+        "source": "external-cli",
+        "unverifiedOpinion": true
+      }
+    },
+    {
+      "id": "astra-nightshift-20260909:5",
+      "seq": 5,
+      "type": "evidence_revealed",
+      "at": "2026-09-09T01:57:39.183Z",
+      "title": "Facilities service log",
+      "summary": "The archive heating system was restarted at 22:10. A pending work order mentions an intermittently sticking exhaust damper. The basement work period began shortly after the restart.",
+      "evidenceIds": [
+        "facilities-log"
+      ],
+      "data": {
+        "kind": "record",
+        "stage": 2
+      }
+    },
+    {
+      "id": "astra-nightshift-20260909:6",
+      "seq": 6,
+      "type": "decision_accepted",
+      "at": "2026-09-09T01:57:56.289Z",
+      "title": "Inspection decision accepted",
+      "summary": "The facilities log adds a plausible mechanical lead but does not verify the incident. I deliberately test the food hypothesis rather than treating the first coherent theory as settled. Two further inspections plus resolution fit the three remaining accepted decisions.",
+      "evidenceIds": [
+        "room-timeline",
+        "facilities-log"
+      ],
+      "data": {
+        "decision": {
+          "decisionVersion": 3,
+          "idempotencyKey": "astra-nightshift-turn-3",
+          "action": "inspect",
+          "targetEvidenceId": "meal-log",
+          "hypothesis": "Heating/exhaust trouble is a plausible location-linked explanation, but an alternative should be checked before resolution.",
+          "evidenceIds": [
+            "room-timeline",
+            "facilities-log"
+          ],
+          "perspectives": [
+            {
+              "role": "Pattern Finder",
+              "position": "The heater restart and subsequent basement work form a coherent chronology."
+            },
+            {
+              "role": "Skeptic",
+              "position": "An unresolved work order is not proof that the fault occurred during this shift."
+            },
+            {
+              "role": "Evidence Analyst",
+              "position": "Use the remaining investigation budget to check meal overlap, then inspect the maintenance finding."
+            },
+            {
+              "role": "Alternatives Explorer",
+              "position": "A common meal could still offer a competing explanation; inspect the actual record."
+            },
+            {
+              "role": "Moderator",
+              "position": "The protocol permits resolving now, but permission is not evidential sufficiency. Check the alternative."
+            }
+          ],
+          "rationale": "The facilities log adds a plausible mechanical lead but does not verify the incident. I deliberately test the food hypothesis rather than treating the first coherent theory as settled. Two further inspections plus resolution fit the three remaining accepted decisions."
+        },
+        "source": "external-cli",
+        "unverifiedOpinion": true
+      }
+    },
+    {
+      "id": "astra-nightshift-20260909:7",
+      "seq": 7,
+      "type": "evidence_revealed",
+      "at": "2026-09-09T01:57:56.289Z",
+      "title": "Break-room meal log",
+      "summary": "Mara and Leon shared a takeaway meal. Priya ate a meal from home and did not share their food. A day-shift colleague ate the same takeaway leftovers but reported no problem in this story.",
+      "evidenceIds": [
+        "meal-log"
+      ],
+      "data": {
+        "kind": "record",
+        "stage": 1
+      }
+    },
+    {
+      "id": "astra-nightshift-20260909:8",
+      "seq": 8,
+      "type": "decision_accepted",
+      "at": "2026-09-09T01:58:16.761Z",
+      "title": "Inspection decision accepted",
+      "summary": "The revealed meal log makes one shared-food cause less coherent, while the room chronology and heater restart align. I still need the maintenance record before treating the suspected equipment fault as supported by direct story evidence. No unseen findings are cited.",
+      "evidenceIds": [
+        "room-timeline",
+        "facilities-log",
+        "meal-log"
+      ],
+      "data": {
+        "decision": {
+          "decisionVersion": 4,
+          "idempotencyKey": "astra-nightshift-turn-4",
+          "action": "inspect",
+          "targetEvidenceId": "maintenance-report",
+          "hypothesis": "The shared-food explanation is weakened; a faulty heating/exhaust system remains the best supported fictional lead.",
+          "evidenceIds": [
+            "room-timeline",
+            "facilities-log",
+            "meal-log"
+          ],
+          "perspectives": [
+            {
+              "role": "Skeptic",
+              "position": "Priya did not share the meal, and a colleague ate the leftovers without the reported problem. Food does not account for the whole pattern."
+            },
+            {
+              "role": "Evidence Analyst",
+              "position": "Request direct maintenance observations; do not substitute the earlier work order for an inspection finding."
+            },
+            {
+              "role": "Moderator",
+              "position": "Spend the fourth decision on the maintenance record, reserving the fifth for a bounded resolution."
+            }
+          ],
+          "rationale": "The revealed meal log makes one shared-food cause less coherent, while the room chronology and heater restart align. I still need the maintenance record before treating the suspected equipment fault as supported by direct story evidence. No unseen findings are cited."
+        },
+        "source": "external-cli",
+        "unverifiedOpinion": true
+      }
+    },
+    {
+      "id": "astra-nightshift-20260909:9",
+      "seq": 9,
+      "type": "evidence_revealed",
+      "at": "2026-09-09T01:58:16.761Z",
+      "title": "Sealed maintenance report",
+      "summary": "A fictional facilities inspection records a stuck heating-system exhaust damper and a failed exhaust connection adjoining the basement. The report attributes the room incident to that equipment fault, not to the meals.",
+      "evidenceIds": [
+        "maintenance-report"
+      ],
+      "data": {
+        "kind": "inspection",
+        "stage": 2
+      }
+    },
+    {
+      "id": "astra-nightshift-20260909:10",
+      "seq": 10,
+      "type": "decision_accepted",
+      "at": "2026-09-09T01:58:41.246Z",
+      "title": "Resolution decision accepted",
+      "summary": "The maintenance report now directly records the heating/exhaust fault. It fits the basement/outside timeline and the facilities restart; the meal record weakens the main competing shared-food account. I submit this hypothesis for story resolution, not clinical validation. Acceptance verifies the decision protocol, and the authored answer remains distinct from this external interpretation. This fifth accepted decision closes the bounded investigation.",
+      "evidenceIds": [
+        "room-timeline",
+        "facilities-log",
+        "meal-log",
+        "maintenance-report"
+      ],
+      "data": {
+        "decision": {
+          "decisionVersion": 5,
+          "idempotencyKey": "astra-nightshift-turn-5",
+          "action": "resolve",
+          "hypothesis": "Within the authored fictional scenario, the heating-system exhaust fault best explains the basement-linked incident.",
+          "evidenceIds": [
+            "room-timeline",
+            "facilities-log",
+            "meal-log",
+            "maintenance-report"
+          ],
+          "perspectives": [
+            {
+              "role": "Pattern Finder",
+              "position": "Location-linked accounts and the restart chronology fit the equipment record."
+            },
+            {
+              "role": "Skeptic",
+              "position": "This is consistency with authored evidence, not proof of medical causality in a real patient."
+            },
+            {
+              "role": "Evidence Analyst",
+              "position": "The revealed inspection reports the stuck damper and failed connection directly."
+            },
+            {
+              "role": "Alternatives Explorer",
+              "position": "Meal history does not explain all three accounts; shift fatigue alone does not fit the place-linked changes."
+            },
+            {
+              "role": "Moderator",
+              "position": "Resolve the fictional case with references to the four inspected records, preserving the nonclinical and nonblinded limitations."
+            }
+          ],
+          "rationale": "The maintenance report now directly records the heating/exhaust fault. It fits the basement/outside timeline and the facilities restart; the meal record weakens the main competing shared-food account. I submit this hypothesis for story resolution, not clinical validation. Acceptance verifies the decision protocol, and the authored answer remains distinct from this external interpretation. This fifth accepted decision closes the bounded investigation."
+        },
+        "source": "external-cli",
+        "unverifiedOpinion": true
+      }
+    },
+    {
+      "id": "astra-nightshift-20260909:11",
+      "seq": 11,
+      "type": "resolution",
+      "at": "2026-09-09T01:58:41.262Z",
+      "title": "Authored reveal: the heating-system fault",
+      "summary": "The fixed fictional answer is the air hypothesis: a faulty archive heating system with a stuck damper and failed exhaust connection. The differing meals and rest histories are distractors; the shared room and heating timeline are the intended connecting clues. This reveal makes no real-world medical diagnosis.",
+      "evidenceIds": [],
+      "data": {
+        "externalHypothesis": "Within the authored fictional scenario, the heating-system exhaust fault best explains the basement-linked incident.",
+        "builderKnowsAnswer": true
+      }
+    },
+    {
+      "id": "astra-nightshift-20260909:12",
+      "seq": 12,
+      "type": "evaluation",
+      "at": "2026-09-09T01:58:41.262Z",
+      "title": "Deterministic protocol checks",
+      "summary": "Evidence-reference and decision-budget checks only; not a medical or reasoning-quality score.",
+      "evidenceIds": [],
+      "data": {
+        "kind": "custom-app-assertions",
+        "schemaValidDecisions": 5,
+        "acceptedDecisions": 5,
+        "evidenceReferenceCount": 12,
+        "invalidEvidenceReferences": 0,
+        "revealedEvidenceCount": 5,
+        "maxDecisions": 5,
+        "remainingDecisions": 0,
+        "budgetWithinBound": true,
+        "modelApiCalls": 0
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "opening",
+      "title": "Three accounts at the archive",
+      "kind": "briefing",
+      "stage": 0,
+      "summary": "In this fictional story, archivists Mara, Leon, and Priya report headache and nausea during the same overnight cataloguing shift. The opening possibilities are fatigue, food, and something about the archive air. No cause has been established."
+    },
+    {
+      "id": "meal-log",
+      "title": "Break-room meal log",
+      "kind": "record",
+      "stage": 1,
+      "summary": "Mara and Leon shared a takeaway meal. Priya ate a meal from home and did not share their food. A day-shift colleague ate the same takeaway leftovers but reported no problem in this story."
+    },
+    {
+      "id": "room-timeline",
+      "title": "Room-by-room timeline",
+      "kind": "timeline",
+      "stage": 1,
+      "summary": "All three accounts describe feeling worse after working in the basement and better while sorting boxes outside. Those changes line up with location rather than a shared meal or length of shift."
+    },
+    {
+      "id": "facilities-log",
+      "title": "Facilities service log",
+      "kind": "record",
+      "stage": 2,
+      "summary": "The archive heating system was restarted at 22:10. A pending work order mentions an intermittently sticking exhaust damper. The basement work period began shortly after the restart."
+    },
+    {
+      "id": "maintenance-report",
+      "title": "Sealed maintenance report",
+      "kind": "inspection",
+      "stage": 2,
+      "summary": "A fictional facilities inspection records a stuck heating-system exhaust damper and a failed exhaust connection adjoining the basement. The report attributes the room incident to that equipment fault, not to the meals."
+    }
+  ],
+  "resolution": {
+    "title": "Authored reveal: the heating-system fault",
+    "summary": "The fixed fictional answer is the air hypothesis: a faulty archive heating system with a stuck damper and failed exhaust connection. The differing meals and rest histories are distractors; the shared room and heating timeline are the intended connecting clues. This reveal makes no real-world medical diagnosis."
+  },
+  "receipts": {
+    "mastraVersion": "1.64.0",
+    "mastraCliVersion": "1.27.3",
+    "libsqlVersion": "1.22.3",
+    "nodeVersion": "v24.14.1",
+    "workflowStatus": "success",
+    "modelApiCalls": 0,
+    "noModelApiCalls": true,
+    "decisionSource": "external local CLI",
+    "mockTranscript": false,
+    "builderKnowsAnswer": true,
+    "authBoundary": "local trusted CLI; not multi-user authorization",
+    "decisionReceipts": [
+      {
+        "runId": "astra-nightshift-20260909",
+        "idempotencyKey": "astra-nightshift-turn-1",
+        "decisionVersion": 1,
+        "action": "inspect",
+        "accepted": true,
+        "at": "2026-09-09T01:54:12.367Z",
+        "eventId": "astra-nightshift-20260909:2",
+        "revealedEvidenceId": "room-timeline"
+      },
+      {
+        "runId": "astra-nightshift-20260909",
+        "idempotencyKey": "astra-nightshift-turn-2",
+        "decisionVersion": 2,
+        "action": "inspect",
+        "accepted": true,
+        "at": "2026-09-09T01:57:39.183Z",
+        "eventId": "astra-nightshift-20260909:4",
+        "revealedEvidenceId": "facilities-log"
+      },
+      {
+        "runId": "astra-nightshift-20260909",
+        "idempotencyKey": "astra-nightshift-turn-3",
+        "decisionVersion": 3,
+        "action": "inspect",
+        "accepted": true,
+        "at": "2026-09-09T01:57:56.289Z",
+        "eventId": "astra-nightshift-20260909:6",
+        "revealedEvidenceId": "meal-log"
+      },
+      {
+        "runId": "astra-nightshift-20260909",
+        "idempotencyKey": "astra-nightshift-turn-4",
+        "decisionVersion": 4,
+        "action": "inspect",
+        "accepted": true,
+        "at": "2026-09-09T01:58:16.761Z",
+        "eventId": "astra-nightshift-20260909:8",
+        "revealedEvidenceId": "maintenance-report"
+      },
+      {
+        "runId": "astra-nightshift-20260909",
+        "idempotencyKey": "astra-nightshift-turn-5",
+        "decisionVersion": 5,
+        "action": "resolve",
+        "accepted": true,
+        "at": "2026-09-09T01:58:41.246Z",
+        "eventId": "astra-nightshift-20260909:10"
+      }
+    ],
+    "evaluation": {
+      "kind": "custom-app-assertions",
+      "schemaValidDecisions": 5,
+      "acceptedDecisions": 5,
+      "evidenceReferenceCount": 12,
+      "invalidEvidenceReferences": 0,
+      "revealedEvidenceCount": 5,
+      "maxDecisions": 5,
+      "remainingDecisions": 0,
+      "budgetWithinBound": true,
+      "modelApiCalls": 0
+    }
+  }
+}
